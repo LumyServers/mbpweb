@@ -1161,3 +1161,144 @@ html.js [data-animar] {
     transform: none;
   }
 }
+
+/* ---------- Páginas por etapa (cuna, inicial, primaria, secundaria) ---------- */
+.pagina-hero {
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 64px 0;
+  text-align: center;
+}
+
+.pagina-hero .miga {
+  color: var(--cielo);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.pagina-hero .miga a {
+  color: var(--cielo);
+}
+
+.pagina-hero .miga a:hover {
+  text-decoration: underline;
+}
+
+.pagina-hero h1 {
+  font-size: 44px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.pagina-hero .etapa-edad {
+  color: var(--cielo);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-volver {
+  color: var(--azul);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nav-volver:hover {
+  color: var(--azul-vivo);
+}
+
+.pagina-contenido {
+  padding: 64px 0;
+}
+
+.pagina-contenido h2 {
+  font-size: 28px;
+  color: var(--negro);
+  margin-bottom: 16px;
+}
+
+.pagina-fila {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.pagina-fila-texto .lead {
+  color: var(--gris-texto);
+  margin-bottom: 14px;
+}
+
+.pagina-fila-imagen img {
+  border-radius: 8px;
+  box-shadow: 0 20px 40px var(--sombra-fuerte);
+}
+
+.pagina-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.pagina-tarjeta {
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 26px 24px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pagina-tarjeta:hover {
+  box-shadow: 0 14px 32px var(--sombra-fuerte);
+  transform: translateY(-4px);
+}
+
+.pagina-tarjeta i {
+  font-size: 24px;
+  color: var(--azul);
+  margin-bottom: 12px;
+}
+
+.pagina-tarjeta h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: var(--negro);
+}
+
+.pagina-tarjeta p {
+  font-size: 14px;
+  color: var(--gris-texto);
+}
+
+.pagina-dia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.pagina-hora {
+  background: var(--gris-claro);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.pagina-hora strong {
+  color: var(--azul);
+  min-width: 100px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .pagina-fila,
+  .pagina-grid,
+  .pagina-dia {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-hero h1 {
+    font-size: 34px;
+  }
+}
