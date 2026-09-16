@@ -105,10 +105,10 @@
   <!-- Cifras -->
   <section class="cinta">
     <div class="container cinta-grid grid-animada" data-animar>
-      <div class="cinta-item"><h3>14</h3><p>Años de trayectoria</p></div>
-      <div class="cinta-item"><h3>7</h3><p>Docentes calificados</p></div>
-      <div class="cinta-item"><h3>3</h3><p>Niveles educativos</p></div>
-      <div class="cinta-item"><h3>100%</h3><p>Educación en valores</p></div>
+      <div class="cinta-item"><h3 class="contador" data-valor="14">0</h3><p>Años de trayectoria</p></div>
+      <div class="cinta-item"><h3 class="contador" data-valor="7">0</h3><p>Docentes calificados</p></div>
+      <div class="cinta-item"><h3 class="contador" data-valor="3">0</h3><p>Niveles educativos</p></div>
+      <div class="cinta-item"><h3 class="contador" data-valor="100" data-sufijo="%">0</h3><p>Educación en valores</p></div>
     </div>
   </section>
 
@@ -452,12 +452,39 @@
     atenciones.forEach((cta) => {
       cta.addEventListener("click", () => cta.classList.add("toggled"));
     });
+    const contadores = document.querySelectorAll(".contador");
+    const reducir = window.matchMedia("(prefers-reduced-motion: reduce)");
+    function contarNumero(el, retraso) {
+      const objetivo = parseFloat(el.dataset.valor);
+      const sufijo = el.dataset.sufijo || "";
+      if (reducir.matches) {
+        el.textContent = objetivo + sufijo;
+        return;
+      }
+      const dur = 1100;
+      const inicio = performance.now();
+      const paso = (ahora) => {
+        const p = Math.min((ahora - inicio - retraso) / dur, 1);
+        if (p <= 0) {
+          requestAnimationFrame(paso);
+          return;
+        }
+        const suavizado = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(objetivo * suavizado) + sufijo;
+        if (p < 1) requestAnimationFrame(paso);
+      };
+      requestAnimationFrame(paso);
+    }
+
     const animables = document.querySelectorAll("[data-animar]");
     const observador = new IntersectionObserver((entradas) => {
       entradas.forEach((entrada) => {
         if (entrada.isIntersecting) {
           entrada.target.classList.add("visible");
           observador.unobserve(entrada.target);
+          entrada.target.querySelectorAll(".contador").forEach((el, i) => {
+            contarNumero(el, i * 120);
+          });
         }
       });
     }, { threshold: 0.15 });
