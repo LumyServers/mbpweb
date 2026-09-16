@@ -47,8 +47,8 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   Valerio Avila, colegio de Atalaya (Perú). Correo `contacto@mibuenpastor.edu` es provisional.
 - Iconos: Font Awesome 6.5.2 vía CDN (iconos sólidos, no trazar finos). No copiar
   iconos/fuentes de stgeorges.edu.pe (copyright).
-- Páginas por etapa: cada nivel tiene su propia página (`cuna.html`; pendientes
-  inicial, primaria y secundaria). Comparten `style.css` con clases `.pagina-*`
+- Páginas por etapa: cada nivel tiene su propia página (`cuna.html`, `inicial.html`;
+  pendientes primaria y secundaria). Comparten `style.css` con clases `.pagina-*`
   y los enlaces "Saber más" de cada tarjeta llevan a su página.
 
 ## Reglas del proyecto
