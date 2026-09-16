@@ -672,7 +672,7 @@ section {
 
 .directora-imagen img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 18px;
   box-shadow: 0 20px 40px var(--sombra-fuerte);
 }
 
