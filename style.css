@@ -1170,6 +1170,14 @@ html.js [data-animar] {
   text-align: center;
 }
 
+.pagina-hero .container {
+  animation: aparecerArriba 1s ease-out 0.15s both;
+}
+
+.pagina-hero h1 {
+  animation: aparecerArriba 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
 .pagina-hero .miga {
   color: var(--cielo);
   font-size: 14px;
