@@ -1526,6 +1526,34 @@ html.js .grid-animada.visible > * {
   margin: 0 auto;
 }
 
+.datos-responsable {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: end;
+}
+
+.datos-responsable[hidden] {
+  display: none !important;
+}
+
+.telefono-fila {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.telefono-fila select {
+  flex: 0 0 160px;
+  width: 160px;
+}
+
+.telefono-fila input {
+  flex: 1;
+  min-width: 0;
+}
+
 .bloque-segundo {
   grid-column: 1 / -1;
   background: var(--bruma);
@@ -1539,6 +1567,10 @@ html.js .grid-animada.visible > * {
   align-items: end;
 }
 
+.bloque-segundo[hidden] {
+  display: none !important;
+}
+
 .bloque-segundo .campo {
   margin-bottom: 0;
   grid-column: auto;
@@ -1546,6 +1578,13 @@ html.js .grid-animada.visible > * {
 
 .bloque-segundo .campo:last-child {
   grid-column: auto;
+}
+
+@media (max-width: 640px) {
+  .datos-responsable,
+  .bloque-segundo {
+    grid-template-columns: 1fr;
+  }
 }
 
 .inscripcion-info {
@@ -1578,10 +1617,12 @@ html.js .grid-animada.visible > * {
   gap: 10px;
 }
 
-.inscripcion-lista li {
+.inscripcion-lista .nivel-boton {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  text-decoration: none;
   background: var(--blanco);
   border: 1px solid var(--borde);
   border-radius: 8px;
@@ -1589,9 +1630,24 @@ html.js .grid-animada.visible > * {
   font-size: 14px;
   color: var(--tinta);
   font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.inscripcion-lista li i {
+.inscripcion-lista .nivel-boton:hover,
+.inscripcion-lista .nivel-boton:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--marino);
+  color: var(--marino);
+}
+
+.inscripcion-lista .nivel-boton:active {
+  transform: translateY(0);
+}
+
+.inscripcion-lista .nivel-boton i {
   color: var(--amarino, var(--marino));
   font-size: 16px;
   width: 18px;
@@ -1856,10 +1912,6 @@ html.js .grid-animada.visible > * {
   }
 
   .inscripcion-lista {
-    grid-template-columns: 1fr;
-  }
-
-  .bloque-segundo {
     grid-template-columns: 1fr;
   }
 }

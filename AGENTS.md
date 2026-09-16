@@ -58,6 +58,31 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 - Inscripciones externas: `matricula.html` usa FormSubmit.co (gratis, sin backend) hacia
   `i.e.pmibuenpastor@gmail.com`; la primera vez se activa con un correo de confirmación
   (revisar Spam) y luego cada solicitud llega como correo con tabla de datos.
+  - Envío con `fetch` al endpoint AJAX `https://formsubmit.co/ajax/...` (NO `data-ajax`):
+    la página no redirige, oculta el form y muestra el mensaje de confirmación en el lugar.
+    FormSubmit ya activado por el usuario en su Gmail.
+  - Validación: `required` en todos los campos obligatorios (bloquea el envío);
+    único campo opcional es `comentarios`. El `submit` llama `form.reportValidity()`.
+  - Selector de nivel (Cuna/Inicial/Primaria/Secundaria) → campo grado dinámico
+    (`gradosPorNivel` en JS): Cuna [1-3 años], Inicial [3-5 años], Primaria [1º-6º],
+    Secundaria [1º-5º].
+  - Tipo de responsable (Padre/Madre/Apoderado/a/Ambos): al elegir un tipo se muestra
+    `#datosResponsable` con etiqueta dinámica (`#labelNombreResponsable`:
+    "...del padre", "...de la madre", "...del apoderado"); con "Ambos" se muestra además
+    `#bloqueSegundo` (etiqueta "...de la madre"). Los campos del segundo responsable se
+    limpian, deshabilitan y dejan de ser `required` si NO se elige "Ambos" (así no llegan
+    vacíos al correo).
+  - Celular: un solo campo con `select` de país + input de número lado a lado
+    (`.telefono-fila`); las opciones muestran solo código + prefijo: "PE +51", "AR +54",
+    "BO +591", "CL +56", "CO +57", "CR +506", "EC +593", "ES +34", "US +1", "GT +502",
+    "MX +52", "NI +505", "PA +507", "PY +595", "VE +58".
+  - Grid `.campos` de 2 columnas; `#datosResponsable` ocupa todo el ancho
+    (`grid-column: 1 / -1`) y es un sub-grid de 2 columnas; `[hidden]{display:none!important}`
+    para `.datos-responsable` y `.bloque-segundo`.
+  - Lista `.inscripcion-lista` (sidebar "Únete a la familia"): los 4 niveles son
+    enlaces `.nivel-boton` (botones clicables con hover) que llevan a las páginas de
+    cada etapa: Cuna→`cuna.html`, Inicial→`inicial.html`, Primaria→`primaria.html`,
+    Secundaria→`secundaria.html`.
 - Iconos: Font Awesome 6.5.2 vía CDN (iconos sólidos, no trazar finos). No copiar
   iconos/fuentes de stgeorges.edu.pe (copyright).
 - Páginas por etapa: cada nivel tiene su propia página (`cuna.html`,
