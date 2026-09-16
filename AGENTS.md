@@ -56,10 +56,16 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
     sesión (Netlify Identity), escribe/edita noticias y "Publica"; Decap hace
     commit al repo y Netlify redespliega por sí solo (sin build: el sitio es
     estático vanilla).
-  - Falta por hacer (pasos manuales del usuario): subir el repo a GitHub,
-    conectar Netlify al repo (hosting gratis), activar `Identity` + `Git
-    Gateway` y entonces se puede invitar editores por correo. El `fetch` de
-    `noticias.json` no funciona al abrir por `file://`, solo servido por HTTP.
+  - FLUJO DE SINCRONIZACIÓN: lo publicado en el panel llega a GitHub y a la web
+    en línea (~10 s) pero NO a la copia local → para verlo local: `git pull
+    origin main`. Lo que se cambie en local solo llega a la web tras `git
+    commit` + `git push origin main` (Netlify autodespliega).
+  - Ya desplegado: repo GitHub `LumyServers/mbpweb`, Netlify conectado al
+    branch `main`, sitio en `https://capable-basbousa-72f713.netlify.app`
+    (visibilidad Public). `index.html` carga el widget `netlify-identity-widget`
+    (unpkg) para aceptar invitaciones y recuperar contraseña del panel.
+    Correo personal del dueño (Richard): `artamielgx@gmail.com` — invitado
+    como editor del panel.
 - La sección "El colegio" fusiona bienvenida y directora: dos párrafos de
   bienvenida (sin foto lateral, se quitó galeria-1.jpg) seguidos del bloque
   `#directora` con la foto de la directora a la izquierda y sus palabras.
