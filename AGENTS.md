@@ -43,7 +43,7 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   fondo claro `#e6eeff`, botones rojo `#c03227`, acento celeste `#a4cbcc`,
   blanco. Fuentes: Inter (texto) y Space Grotesk (títulos).
 - Datos reales: dirección "Pasaje Los Gaviones Mz. 109b Lte 2", teléfono 945 454 081,
-  14 años de trayectoria, 7 docentes, 3 niveles + cuna, directora Celia Jeannete
+  12 años de trayectoria (desde 2014, calculado a 2026), 7 docentes, 3 niveles + cuna, directora Celia Jeannete
   Valerio Avila, colegio de Atalaya (Perú). Correo `contacto@mibuenpastor.edu` es provisional.
 - Iconos: Font Awesome 6.5.2 vía CDN (iconos sólidos, no trazar finos). No copiar
   iconos/fuentes de stgeorges.edu.pe (copyright).
