@@ -140,7 +140,34 @@
           </p>
         </div>
         <div class="bienvenida-imagen">
-          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=80" alt="Niños felices en el aula" class="img-redonda">
+          <div class="galeria" id="galeriaBienvenida">
+            <div class="galeria-diapositiva activa" role="group" aria-label="Foto 1 de 6">
+              <img src="fotos/galeria/galeria-1.jpg" alt="Estudiantes del colegio" loading="lazy">
+            </div>
+            <div class="galeria-diapositiva" role="group" aria-label="Foto 2 de 6" aria-hidden="true">
+              <img src="fotos/galeria/galeria-2.jpg" alt="Estudiantes del colegio" loading="lazy">
+            </div>
+            <div class="galeria-diapositiva" role="group" aria-label="Foto 3 de 6" aria-hidden="true">
+              <img src="fotos/galeria/galeria-3.jpg" alt="Estudiantes del colegio" loading="lazy">
+            </div>
+            <div class="galeria-diapositiva" role="group" aria-label="Foto 4 de 6" aria-hidden="true">
+              <img src="fotos/galeria/galeria-4.jpg" alt="Estudiantes del colegio" loading="lazy">
+            </div>
+            <div class="galeria-diapositiva" role="group" aria-label="Foto 5 de 6" aria-hidden="true">
+              <img src="fotos/galeria/galeria-5.jpg" alt="Estudiantes del colegio" loading="lazy">
+            </div>
+            <div class="galeria-diapositiva" role="group" aria-label="Foto 6 de 6" aria-hidden="true">
+              <img src="fotos/galeria/galeria-6.jpg" alt="Estudiantes del colegio" loading="lazy">
+            </div>
+          </div>
+          <div class="galeria-puntos" role="tablist" aria-label="Galería de fotos del colegio">
+            <button type="button" class="punto activa" aria-label="Foto 1" data-ir="0"></button>
+            <button type="button" class="punto" aria-label="Foto 2" data-ir="1"></button>
+            <button type="button" class="punto" aria-label="Foto 3" data-ir="2"></button>
+            <button type="button" class="punto" aria-label="Foto 4" data-ir="3"></button>
+            <button type="button" class="punto" aria-label="Foto 5" data-ir="4"></button>
+            <button type="button" class="punto" aria-label="Foto 6" data-ir="5"></button>
+          </div>
           <span class="bienvenida-badge"><i class="fa-solid fa-heart"></i> Aprende · Juega · Crece</span>
         </div>
       </div>
@@ -472,6 +499,37 @@
           ocupado = false;
         });
       }, { passive: true });
+    }
+    const galeriaBienvenida = document.getElementById("galeriaBienvenida");
+    if (galeriaBienvenida) {
+      const diapositivas = galeriaBienvenida.querySelectorAll(".galeria-diapositiva");
+      const puntos = document.querySelectorAll(".punto");
+      const prefiereMenosMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let actualBienvenida = 0;
+      let temporizadorGaleria = null;
+      const irA = (n) => {
+        actualBienvenida = (n + diapositivas.length) % diapositivas.length;
+        diapositivas.forEach((d, i) => {
+          d.classList.toggle("activa", i === actualBienvenida);
+          d.setAttribute("aria-hidden", i === actualBienvenida ? "false" : "true");
+        });
+        puntos.forEach((p, i) => p.classList.toggle("activa", i === actualBienvenida));
+      };
+      puntos.forEach((p, i) => p.addEventListener("click", () => irA(i)));
+      const detenerGaleria = () => {
+        if (temporizadorGaleria) { clearInterval(temporizadorGaleria); temporizadorGaleria = null; }
+      };
+      const iniciarGaleria = () => {
+        if (prefiereMenosMovimiento.matches || diapositivas.length < 2) return;
+        detenerGaleria();
+        temporizadorGaleria = setInterval(() => irA(actualBienvenida + 1), 4000);
+      };
+      galeriaBienvenida.addEventListener("mouseenter", detenerGaleria);
+      galeriaBienvenida.addEventListener("mouseleave", iniciarGaleria);
+      galeriaBienvenida.addEventListener("focusin", detenerGaleria);
+      galeriaBienvenida.addEventListener("focusout", iniciarGaleria);
+      irA(0);
+      iniciarGaleria();
     }
     const atenciones = document.querySelectorAll(".atencion");
     atenciones.forEach((cta) => {

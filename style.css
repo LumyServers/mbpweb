@@ -459,15 +459,61 @@ section {
   position: relative;
 }
 
-.bienvenida-imagen img {
-  border-radius: 8px;
+.galeria {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
   box-shadow: 0 20px 40px var(--sombra-fuerte);
+}
+
+.galeria-diapositiva {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.galeria-diapositiva.activa {
+  opacity: 1;
+}
+
+.galeria-diapositiva img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.galeria-puntos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.punto {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--gris-borde);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.punto.activa {
+  background: var(--azul);
+  transform: scale(1.25);
 }
 
 .bienvenida-badge {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 8px;
