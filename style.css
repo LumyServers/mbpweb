@@ -436,6 +436,47 @@ section {
   color: var(--lima-oscuro);
 }
 
+/* ---------- Directora ---------- */
+#directora {
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+.directora-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.directora-imagen img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+.directora-cita {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.directora-firma {
+  font-weight: 700;
+  color: var(--lima);
+  font-size: 17px;
+}
+
+.directora-cargo {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #cfe0d8;
+  margin-top: 4px;
+}
+
 /* ---------- Pasos de admisión ---------- */
 .pasos {
   display: grid;
@@ -603,6 +644,15 @@ section {
   font-size: 14px;
 }
 
+.tel-enlace {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.tel-enlace:hover {
+  color: var(--lima-oscuro);
+}
+
 /* ---------- Pie de página ---------- */
 .footer {
   background: var(--verde-oscuro);
@@ -696,6 +746,11 @@ section {
   .pasos,
   .contacto-grid {
     grid-template-columns: 1fr;
+  }
+
+  .directora-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .pasos {
