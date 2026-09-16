@@ -1571,60 +1571,60 @@ html.js .grid-animada.visible > * {
 /* ---------- Tipografía ampliada en pantallas grandes ---------- */
 @media (min-width: 1440px) {
   body {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .hero h1 {
-    font-size: 66px;
+    font-size: 76px;
   }
 
   .hero-frase {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .hero-desc,
   .lead,
   .intro-etapas,
   .pagina-fila-texto .lead {
-    font-size: 19px;
+    font-size: 21px;
   }
 
   .titulo-seccion {
-    font-size: 46px;
+    font-size: 52px;
   }
 
   .subtitulo {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .directora-cita {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .contador {
-    font-size: 68px;
+    font-size: 78px;
   }
 
   .noticia-cuerpo h3,
   .paso h3 {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .noticia-cuerpo p,
   .paso p,
   .etapa-info p:not(.etapa-edad) {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .cta-texto h2 {
-    font-size: 52px;
+    font-size: 60px;
   }
 
   .pagina-hero h1 {
-    font-size: 56px;
+    font-size: 66px;
   }
 
   .pagina-fila-texto .lead {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
