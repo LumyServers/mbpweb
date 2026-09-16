@@ -1143,6 +1143,7 @@ html.js .grid-animada > * {
 
 [data-animar].visible.grid-animada {
   animation: none;
+  opacity: 1;
 }
 
 html.js .grid-animada.visible > * {
