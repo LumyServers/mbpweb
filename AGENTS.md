@@ -39,10 +39,10 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   ¡Bienvenidos!), noticias, testimonios "¿Qué nos diferencia?",
   banner "Pide información" y pie de página (la sección Contacto fue
   eliminada; los enlaces apuntan a #admision y los datos quedan en el pie).
-- Paleta del sitio derivada del logo (versión pastel): rosado bordo `#a14a44`,
-  bordo oscuro pastel `#7c322f`, acento `#b8665e`, arena crema `#e3d6bc`,
-  fondos claros crema `#faf5ec`, bordes `#ece1ce`, texto `#8a7f6d`,
-  títulos `#4a3d33`, blanco. Fuentes: Inter (texto) y Space Grotesk (títulos).
+- Paleta del sitio (elegida por el usuario): rosa `#F472B6`, rosa claro
+  `#FBCFE8`, slate oscuro `#1E293B` (textos/footer/overlays), rosa fondo
+  `#FDF2F8`. Apoyos: hover `#EC4899`, texto gris `#64748B`, títulos `#1E293B`,
+  blanco. Fuentes: Inter (texto) y Space Grotesk (títulos).
 - Datos reales: dirección "Pasaje Los Gaviones Mz. 109b Lte 2", teléfono 945 454 081,
   12 años de trayectoria (desde 2014, calculado a 2026), 7 docentes, 3 niveles + cuna, directora Celia Jeannete
   Valerio Avila, colegio de Atalaya (Perú). Correo `contacto@mibuenpastor.edu` es provisional.
