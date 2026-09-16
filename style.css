@@ -670,10 +670,20 @@ section {
   align-items: center;
 }
 
-.directora-imagen img {
-  width: 100%;
+.directora-imagen {
+  overflow: hidden;
+  height: 520px;
   border-radius: 18px;
   box-shadow: 0 20px 40px var(--sombra-fuerte);
+}
+
+.directora-imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .directora-cita {
@@ -1009,6 +1019,10 @@ section {
   .directora-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .directora-imagen {
+    height: 400px;
   }
 
   .footer-grid {
