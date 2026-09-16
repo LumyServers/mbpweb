@@ -52,38 +52,19 @@
     </div>
   </section>
 
-  <!-- Presentación -->
-  <section class="pagina-contenido">
+  <!-- Inscripción y matrícula -->
+  <section class="pagina-contenido seccion-gris" id="inscripcion">
     <div class="container">
-      <div class="pagina-fila">
-        <div class="pagina-fila-texto">
-          <h2 data-animar>Únete a la familia MI BUEN PASTOR</h2>
-          <p class="lead">Completa el formulario de inscripción y uno de nuestros representantes te contactará para guiarte en el proceso de matrícula.</p>
-          <p>Ofrecemos los niveles de Cuna, Inicial, Primaria y Secundaria, con educación en valores cristianos y matrícula abierta durante todo el año.</p>
-          <a href="https://wa.me/51945454081" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp</a>
-        </div>
-        <div class="pagina-fila-imagen zoom" data-animar>
-          <img src="fotos/galeria/hero-1.jpg" alt="Estudiantes de la I.E.P MI BUEN PASTOR">
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="inscripcion-columnas">
+        <div class="formulario-marco zoom" data-animar style="--a:1">
+          <form id="formInscripcion" class="formulario-propio" action="https://docs.google.com/forms/d/e/1FAIpQLSf4NC-PD-sd6vlfqjxJvUgdCWzDvIlb6jAky0NIlcW98xB7Vw/formResponse" method="POST" target="oculto-form">
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="partialResponse" value="[null,null,&quot;323859821535648179&quot;]">
+            <input type="hidden" name="pageHistory" value="0">
+            <input type="hidden" name="fbzx" value="323859821535648179">
+            <input type="hidden" name="submissionTimestamp" value="-1">
 
-  <!-- Formulario de inscripción -->
-  <section class="pagina-contenido seccion-gris">
-    <div class="container">
-      <h2 data-animar>Formulario de inscripción</h2>
-      <p class="subtitulo">Completa tus datos y en breve recibirás una respuesta por WhatsApp.</p>
-
-      <div class="formulario-marco zoom" data-animar style="--a:1">
-        <form id="formInscripcion" class="formulario-propio" action="https://docs.google.com/forms/d/e/1FAIpQLSf4NC-PD-sd6vlfqjxJvUgdCWzDvIlb6jAky0NIlcW98xB7Vw/formResponse" method="POST" target="oculto-form">
-          <input type="hidden" name="fvv" value="1">
-          <input type="hidden" name="partialResponse" value="[null,null,&quot;323859821535648179&quot;]">
-          <input type="hidden" name="pageHistory" value="0">
-          <input type="hidden" name="fbzx" value="323859821535648179">
-          <input type="hidden" name="submissionTimestamp" value="-1">
-
-          <div class="campos">
+            <div class="campos">
             <div class="campo">
               <label for="nombreEstudiante">Nombre del estudiante</label>
               <input type="text" id="nombreEstudiante" name="entry.1058944864" required>
@@ -129,6 +110,24 @@
           <button type="submit" class="btn-enviar">Enviar inscripción</button>
           <p class="nota-form">Al enviar, nuestros representantes te contactarán por WhatsApp.</p>
         </form>
+      </div>
+
+        <aside class="inscripcion-info">
+          <h2 data-animar>Únete a la familia MI BUEN PASTOR</h2>
+          <p class="lead">Ofrecemos los niveles de Cuna, Inicial, Primaria y Secundaria, con educación en valores cristianos y matrícula abierta durante todo el año.</p>
+          <ul class="inscripcion-lista">
+            <li><i class="fa-solid fa-child" aria-hidden="true"></i> Cuna</li>
+            <li><i class="fa-solid fa-school" aria-hidden="true"></i> Inicial</li>
+            <li><i class="fa-solid fa-book-open" aria-hidden="true"></i> Primaria</li>
+            <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Secundaria</li>
+          </ul>
+          <p>Completa el formulario y en breve recibirás una respuesta por WhatsApp.</p>
+          <a href="https://wa.me/51945454081" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> ¿Dudas? Escríbenos por WhatsApp</a>
+          <div class="inscripcion-datos">
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Pasaje Los Gaviones Mz. 109b Lte 2</p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i> 945 454 081</p>
+          </div>
+        </aside>
       </div>
 
       <div id="confirmacion" class="confirmacion" hidden>

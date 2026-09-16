@@ -1452,10 +1452,138 @@ html.js .grid-animada.visible > * {
   color: var(--tinta-suave);
 }
 
+/* ---------- Requisitos de matrícula ---------- */
+.requisitos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.requisito {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 26px 24px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.requisito:hover {
+  box-shadow: 0 14px 32px var(--sombra-fuerte);
+  transform: translateY(-4px);
+}
+
+.requisito i {
+  font-size: 24px;
+  color: var(--marino);
+  margin-bottom: 12px;
+}
+
+.requisito h3 {
+  font-size: 17px;
+  color: var(--tinta);
+  margin-bottom: 8px;
+}
+
+.requisito p {
+  font-size: 14px;
+  color: var(--tinta-suave);
+}
+
 /* ---------- Formulario de matrícula ---------- */
-.formulario-marco {
-  max-width: 760px;
+.inscripcion-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: start;
+  max-width: 1240px;
   margin: 0 auto;
+}
+
+.inscripcion-info {
+  order: 1;
+  position: sticky;
+  top: 24px;
+}
+
+.formulario-marco {
+  order: 2;
+}
+
+.inscripcion-info h2 {
+  font-size: 32px;
+  color: var(--tinta);
+  margin-bottom: 14px;
+}
+
+.inscripcion-info .lead {
+  color: var(--tinta-suave);
+  margin-bottom: 18px;
+}
+
+.inscripcion-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.inscripcion-lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.inscripcion-lista li i {
+  color: var(--amarino, var(--marino));
+  font-size: 16px;
+  width: 18px;
+  text-align: center;
+}
+
+.inscripcion-info > p {
+  color: var(--tinta-suave);
+  margin-bottom: 18px;
+}
+
+.inscripcion-datos {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borde);
+  display: grid;
+  gap: 8px;
+}
+
+.inscripcion-datos p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--tinta-suave);
+  margin: 0;
+}
+
+.inscripcion-datos i {
+  color: var(--marino);
+  margin-top: 3px;
+  width: 16px;
+  text-align: center;
+}
+
+.formulario-marco {
+  max-width: 100%;
+  margin: 0;
   background: var(--blanco);
   border: 1px solid var(--borde);
   border-radius: 12px;
@@ -1649,12 +1777,27 @@ html.js .grid-animada.visible > * {
   transform: translateY(-2px);
 }
 
+@media (max-width: 960px) {
+  .inscripcion-columnas {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .inscripcion-info {
+    position: static;
+  }
+}
+
 @media (max-width: 640px) {
   .formulario-propio {
     padding: 22px;
   }
 
   .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .inscripcion-lista {
     grid-template-columns: 1fr;
   }
 }
@@ -1684,7 +1827,10 @@ html.js .grid-animada.visible > * {
 @media (max-width: 700px) {
   .pagina-fila,
   .pagina-grid,
-  .pagina-dia {
+/* ---------- Carrusel de fotos ---------- */
+/* (eliminado — se reutiliza en otra sección si se necesita) */
+
+.pagina-dia {
     grid-template-columns: 1fr;
   }
 
