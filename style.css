@@ -897,6 +897,7 @@ section {
 .footer-nombre {
   font-size: 19px;
   color: var(--blanco);
+  text-transform: uppercase;
 }
 
 .footer-nombre strong {
