@@ -468,21 +468,21 @@ section {
 /* Palabras de la directora dentro de la bienvenida */
 .palabras-directora {
   position: relative;
-  margin-top: 28px;
-  padding: 20px 22px 18px;
+  margin-top: 24px;
+  padding: 16px 18px 14px;
   background: var(--blanco);
-  border: 2px solid var(--espuma);
-  border-radius: 16px;
-  box-shadow: 0 12px 28px var(--sombra);
+  border: 1.5px solid var(--espuma);
+  border-radius: 14px;
+  box-shadow: 0 10px 22px var(--sombra);
 }
 
 .palabras-directora::before {
   content: "\201C";
   position: absolute;
-  top: -16px;
-  left: 20px;
+  top: -12px;
+  left: 16px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1;
   font-weight: 800;
   color: var(--aguamarina);
@@ -491,11 +491,11 @@ section {
 .palabras-directora .directora-cita {
   font-family: "Space Grotesk", sans-serif;
   font-style: italic;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--tinta);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .palabras-directora .directora-firma {
