@@ -105,6 +105,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.3px;
   color: var(--negro);
+  text-transform: uppercase;
 }
 
 .marca-nombre strong {
@@ -118,6 +119,7 @@ a {
   font-size: 10px;
   color: var(--gris-texto);
   letter-spacing: 2.2px;
+  text-transform: uppercase;
   text-transform: uppercase;
   margin-top: 3px;
 }
