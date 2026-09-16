@@ -170,14 +170,14 @@ a {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 230px;
+  min-width: 240px;
   background: var(--blanco);
   border: 1px solid var(--gris-borde);
   border-radius: 8px;
   box-shadow: 0 14px 32px var(--sombra-fuerte);
   list-style: none;
   padding: 8px;
-  margin-top: 8px;
+  margin-top: 0;
   display: none;
   z-index: 200;
 }
@@ -780,58 +780,6 @@ section {
   text-transform: uppercase;
   color: var(--gris-texto);
   margin-top: 3px;
-}
-
-/* ---------- Acreditaciones ---------- */
-.acreditaciones {
-  background: var(--azul-oscuro);
-}
-
-.acreditaciones .titulo-seccion {
-  color: var(--blanco);
-}
-
-.acreditaciones .titulo-seccion::after {
-  background: var(--azul-vivo);
-}
-
-.acreditaciones .subtitulo {
-  color: var(--cielo);
-}
-
-.acreditaciones-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-}
-
-.acreditacion {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  padding: 26px 20px;
-  text-align: center;
-}
-
-.acreditacion-icono {
-  display: inline-flex;
-}
-
-.acreditacion-icono .icono-svg {
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-}
-
-.acreditacion h3 {
-  color: var(--blanco);
-  font-size: 16px;
-  margin: 10px 0 6px;
-}
-
-.acreditacion p {
-  color: #c8d4f0;
-  font-size: 13px;
 }
 
 /* ---------- Llamado a la acción ---------- */
