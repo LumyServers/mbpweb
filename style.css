@@ -395,7 +395,25 @@ section {
 }
 
 .seccion-gris {
-  background: var(--gris-claro);
+  background: #d8e6fb;
+}
+
+#colegio {
+  background: #e6feff;
+  border-top: 4px solid var(--cielo);
+}
+
+#admision {
+  background: #e6feff;
+  border-top: 4px solid var(--cielo);
+}
+
+#directora {
+  background: #f7faff;
+}
+
+#noticias {
+  border-top: 4px solid #9db8e8;
 }
 
 .titulo-seccion {
