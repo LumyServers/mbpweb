@@ -61,7 +61,7 @@
   <section class="pagina-contenido seccion-gris">
     <div class="container">
       <h2 data-animar>Nuestra propuesta</h2>
-      <div class="pagina-grid" data-animar style="--a:1">
+      <div class="pagina-grid grid-animada" data-animar style="--a:1">
         <div class="pagina-tarjeta">
           <i class="fa-solid fa-heart"></i>
           <h3>Afecto y seguridad</h3>
@@ -100,7 +100,7 @@
   <section class="pagina-contenido">
     <div class="container">
       <h2 data-animar>Un día en la cuna</h2>
-      <div class="pagina-dia" data-animar style="--a:1">
+      <div class="pagina-dia grid-animada" data-animar style="--a:1">
         <div class="pagina-hora"><strong>08:00</strong><span>Recibimiento y juego libre guiado</span></div>
         <div class="pagina-hora"><strong>09:00</strong><span>Refrigerio de media mañana</span></div>
         <div class="pagina-hora"><strong>09:30</strong><span>Actividades de estimulación temprana</span></div>
@@ -118,7 +118,7 @@
         <h2>¿Estás pensando en la cuna?</h2>
         <p>Escríbenos y conoce la propuesta para los más pequeños.</p>
       </div>
-      <a href="index.html#admision" class="btn-cta">Inscripciones 2026</a>
+      <a href="index.html#admision" class="btn-cta atencion">Inscripciones 2026</a>
     </div>
   </section>
 
@@ -156,6 +156,10 @@
 
   <script>
     document.documentElement.classList.add("js");
+    const atenciones = document.querySelectorAll(".atencion");
+    atenciones.forEach((cta) => {
+      cta.addEventListener("click", () => cta.classList.add("toggled"));
+    });
     const animables = document.querySelectorAll("[data-animar]");
     const observador = new IntersectionObserver((entradas) => {
       entradas.forEach((entrada) => {

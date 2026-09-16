@@ -17,7 +17,20 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   @keyframes), entrada del hero, transiciones suaves en hover de tarjetas,
   imágenes, pasos, enlaces, botones y subrayado animado del menú.
   Respetan `prefers-reduced-motion`.
-- 16 elementos con `data-animar` (títulos y grillas) revelados con
+- Convenciones de animación (aplicar SIEMPRE en index y páginas nuevas):
+  - Animar solo `transform` y `opacity` (nunca top/margin/width/height).
+  - Entradas de 300-500 ms con `cubic-bezier(0.22, 1, 0.36, 1)` y
+    `animation-fill-mode: both`.
+  - Grillas con aparición escalonada: clase `grid-animada` en el contenedor
+    (con `data-animar`); cada hijo se revela con 90 ms de retraso vía nth-child.
+  - Usar transiciones para hovers de 2 estados (no @keyframes); prohibido
+    `transition: all`.
+  - CTA principal con clase `atencion`: anillo pulsante (solo opacity) que
+    desaparece al hacer clic (JS agrega `.toggled`).
+  - Foco visible para teclado: `:focus-visible` global.
+  - `prefers-reduced-motion: reduce` = quitar animación, dejar estado final
+    visible (el anillo CTA queda estático).
+  - 16 elementos con `data-animar` (títulos y grillas) revelados con
   `cubic-bezier(0.22, 1, 0.36, 1)` y retraso escalonado vía `--a`.
 - Portada con foto y superposición azul, cinta de cifras, bienvenida,
   franja de valores con desplazamiento suave (iconos Font Awesome, se pausa

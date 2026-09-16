@@ -1136,6 +1136,59 @@ html.js [data-animar] {
   }
 }
 
+/* Entrada escalonada por elemento en grillas (en vez de un solo bloque) */
+html.js .grid-animada > * {
+  opacity: 0;
+}
+
+[data-animar].visible.grid-animada {
+  animation: none;
+}
+
+html.js .grid-animada.visible > * {
+  animation: aparecerArriba 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.grid-animada.visible > *:nth-child(1) { animation-delay: 40ms; }
+.grid-animada.visible > *:nth-child(2) { animation-delay: 130ms; }
+.grid-animada.visible > *:nth-child(3) { animation-delay: 220ms; }
+.grid-animada.visible > *:nth-child(4) { animation-delay: 310ms; }
+.grid-animada.visible > *:nth-child(5) { animation-delay: 400ms; }
+.grid-animada.visible > *:nth-child(6) { animation-delay: 490ms; }
+
+/* Atención: anillo pulsante en CTA principal hasta que se hace clic.
+   Solo anima opacity (capa aparte), sin costo de layout. */
+.atencion {
+  position: relative;
+}
+
+.atencion::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  box-shadow: 0 0 0 4px rgba(192, 50, 39, 0.22);
+  opacity: 0;
+  animation: respiro-atencion 2.4s ease-in-out infinite;
+}
+
+.atencion.toggled::after {
+  animation: none;
+}
+
+@keyframes respiro-atencion {
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Accesibilidad por teclado: foco visible */
+:focus-visible {
+  outline: 2px solid var(--azul-vivo);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .hero-contenido {
   animation: aparecerArriba 1s ease-out 0.2s both;
 }
@@ -1153,6 +1206,19 @@ html.js [data-animar] {
 
   [data-animar].visible {
     animation: none;
+  }
+
+  html.js .grid-animada > * {
+    opacity: 1;
+  }
+
+  html.js .grid-animada.visible > * {
+    animation: none;
+  }
+
+  .atencion::after {
+    animation: none;
+    opacity: 0.45;
   }
 
   .etapa:hover,
