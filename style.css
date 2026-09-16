@@ -1526,6 +1526,28 @@ html.js .grid-animada.visible > * {
   margin: 0 auto;
 }
 
+.bloque-segundo {
+  grid-column: 1 / -1;
+  background: var(--bruma);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: end;
+}
+
+.bloque-segundo .campo {
+  margin-bottom: 0;
+  grid-column: auto;
+}
+
+.bloque-segundo .campo:last-child {
+  grid-column: auto;
+}
+
 .inscripcion-info {
   order: 1;
   position: sticky;
@@ -1653,6 +1675,7 @@ html.js .grid-animada.visible > * {
 .campo input[type="text"],
 .campo input[type="tel"],
 .campo input[type="date"],
+.campo select,
 .campo textarea {
   font-family: inherit;
   font-size: 15px;
@@ -1664,7 +1687,23 @@ html.js .grid-animada.visible > * {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.campo select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%230E4D64' d='M1.4 0 6 4.6 10.6 0 12 1.4 6 7.4 0 1.4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 38px;
+}
+
+.campo select[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .campo input:focus,
+.campo select:focus,
 .campo textarea:focus {
   outline: none;
   border-color: var(--marino);
@@ -1817,6 +1856,10 @@ html.js .grid-animada.visible > * {
   }
 
   .inscripcion-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque-segundo {
     grid-template-columns: 1fr;
   }
 }

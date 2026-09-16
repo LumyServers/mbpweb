@@ -76,7 +76,7 @@
 
             <fieldset class="campo">
               <legend>Nivel que desea</legend>
-              <div class="opciones">
+              <div class="opciones" id="opcionesNivel">
                 <label class="opcion"><input type="radio" name="nivel" value="Cuna" required> Cuna</label>
                 <label class="opcion"><input type="radio" name="nivel" value="Inicial" required> Inicial</label>
                 <label class="opcion"><input type="radio" name="nivel" value="Primaria" required> Primaria</label>
@@ -84,19 +84,84 @@
               </div>
             </fieldset>
 
-            <div class="campo">
+            <div class="campo" id="campoGrado" hidden>
               <label for="grado">Grado</label>
-              <input type="text" id="grado" name="grado" required>
+              <select id="grado" name="grado" required disabled></select>
             </div>
 
             <div class="campo">
-              <label for="nombrePadre">Nombre del padre/madre</label>
-              <input type="text" id="nombrePadre" name="nombre_padre" required>
+              <label for="tipoResponsable">Tipo de responsable</label>
+              <select id="tipoResponsable" name="tipo_responsable" required>
+                <option value="">Selecciona el tipo…</option>
+                <option value="Padre">Padre</option>
+                <option value="Madre">Madre</option>
+                <option value="Apoderado/a">Apoderado/a</option>
+                <option value="Ambos">Ambos (padre y madre)</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="nombreResponsable">Nombres y apellidos del responsable</label>
+              <input type="text" id="nombreResponsable" name="nombre_responsable" required>
+            </div>
+
+            <div class="campo">
+              <label for="paisResponsable">País / código del celular</label>
+              <select id="paisResponsable" name="pais_responsable" required>
+                <option value="">Selecciona el país…</option>
+                <option value="+51">🇵🇪 Perú (+51)</option>
+                <option value="+54">🇦🇷 Argentina (+54)</option>
+                <option value="+591">🇧🇴 Bolivia (+591)</option>
+                <option value="+56">🇨🇱 Chile (+56)</option>
+                <option value="+57">🇨🇴 Colombia (+57)</option>
+                <option value="+506">🇨🇷 Costa Rica (+506)</option>
+                <option value="+593">🇪🇨 Ecuador (+593)</option>
+                <option value="+34">🇪🇸 España (+34)</option>
+                <option value="+1">🇺🇸 EE.UU. (+1)</option>
+                <option value="+502">🇬🇹 Guatemala (+502)</option>
+                <option value="+52">🇲🇽 México (+52)</option>
+                <option value="+505">🇳🇮 Nicaragua (+505)</option>
+                <option value="+507">🇵🇦 Panamá (+507)</option>
+                <option value="+595">🇵🇾 Paraguay (+595)</option>
+                <option value="+58">🇻🇪 Venezuela (+58)</option>
+              </select>
             </div>
 
             <div class="campo">
               <label for="celular">Celular</label>
-              <input type="tel" id="celular" name="celular" required>
+              <input type="tel" id="celular" name="celular" placeholder="Ej. 945 454 081" required>
+            </div>
+
+            <div id="bloqueSegundo" class="bloque-segundo" hidden>
+              <div class="campo">
+                <label for="nombreSegundo">Nombres y apellidos del segundo responsable</label>
+                <input type="text" id="nombreSegundo" name="nombre_segundo">
+              </div>
+              <div class="campo">
+                <label for="paisSegundo">País / código del celular</label>
+                <select id="paisSegundo" name="pais_segundo">
+                  <option value="">Selecciona el país…</option>
+                  <option value="+51">🇵🇪 Perú (+51)</option>
+                  <option value="+54">🇦🇷 Argentina (+54)</option>
+                  <option value="+591">🇧🇴 Bolivia (+591)</option>
+                  <option value="+56">🇨🇱 Chile (+56)</option>
+                  <option value="+57">🇨🇴 Colombia (+57)</option>
+                  <option value="+506">🇨🇷 Costa Rica (+506)</option>
+                  <option value="+593">🇪🇨 Ecuador (+593)</option>
+                  <option value="+34">🇪🇸 España (+34)</option>
+                  <option value="+1">🇺🇸 EE.UU. (+1)</option>
+                  <option value="+502">🇬🇹 Guatemala (+502)</option>
+                  <option value="+52">🇲🇽 México (+52)</option>
+                  <option value="+505">🇳🇮 Nicaragua (+505)</option>
+                  <option value="+507">🇵🇦 Panamá (+507)</option>
+                  <option value="+595">🇵🇾 Paraguay (+595)</option>
+                  <option value="+58">🇻🇪 Venezuela (+58)</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="celularSegundo">Celular del segundo responsable</label>
+                <input type="tel" id="celularSegundo" name="celular_segundo">
+              </div>
             </div>
 
             <div class="campo campo-ancho">
@@ -218,6 +283,54 @@
 
     const form = document.getElementById("formInscripcion");
     const confirmacion = document.getElementById("confirmacion");
+
+    const gradosPorNivel = {
+      Cuna: ["1 año", "2 años", "3 años"],
+      Inicial: ["3 años (Inicial 3)", "4 años (Inicial 4)", "5 años (Inicial 5)"],
+      Primaria: ["1º de primaria", "2º de primaria", "3º de primaria", "4º de primaria", "5º de primaria", "6º de primaria"],
+      Secundaria: ["1º de secundaria", "2º de secundaria", "3º de secundaria", "4º de secundaria", "5º de secundaria"]
+    };
+
+    const radiosNivel = form.querySelectorAll("input[name='nivel']");
+    const campoGrado = document.getElementById("campoGrado");
+    const selectGrado = document.getElementById("grado");
+
+    function llenarGrados(nivel) {
+      selectGrado.innerHTML = '<option value="">Selecciona el grado…</option>';
+      (gradosPorNivel[nivel] || []).forEach((grado) => {
+        const opcion = document.createElement("option");
+        opcion.value = grado;
+        opcion.textContent = grado;
+        selectGrado.appendChild(opcion);
+      });
+    }
+
+    radiosNivel.forEach((radio) => {
+      radio.addEventListener("change", () => {
+        if (radio.checked) {
+          selectGrado.disabled = false;
+          selectGrado.required = true;
+          campoGrado.hidden = false;
+          llenarGrados(radio.value);
+          selectGrado.focus();
+        }
+      });
+    });
+
+    const selectResponsable = document.getElementById("tipoResponsable");
+    const bloqueSegundo = document.getElementById("bloqueSegundo");
+    const segundoNombre = document.getElementById("nombreSegundo");
+    const segundoPais = document.getElementById("paisSegundo");
+    const segundoCelular = document.getElementById("celularSegundo");
+
+    selectResponsable.addEventListener("change", () => {
+      const esAmbos = selectResponsable.value === "Ambos";
+      bloqueSegundo.hidden = !esAmbos;
+      segundoNombre.required = esAmbos;
+      segundoPais.required = esAmbos;
+      segundoCelular.required = esAmbos;
+    });
+
     window.formSubmit = {
       success: () => {
         form.hidden = true;
