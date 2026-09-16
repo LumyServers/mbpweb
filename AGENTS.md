@@ -51,6 +51,16 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   `inicial.html`, `primaria.html`, `secundaria.html`). Todas comparten
   `style.css` con clases `.pagina-*` y los enlaces "Saber más" de cada tarjeta
   llevan a su página.
+- Logos oficiales del colegio (fillos del propio colegio, sin copyright):
+  - Fuente original en `MiPastor Since 2014/` (PNG, JPG, Editables .ai/.eps).
+  - Copias web en `logos/`: `logo-horizontal.png` (color, sobre blanco),
+    `logo-horizontal-negativo.png` (blanco, sobre navy), `logo-vertical-negativo.png`
+    (blanco, logo girando en la transición). Se usan en encabezado (`.marca-logo`),
+    pie (`.footer-logo`) y overlay de carga (`.escudo`), reemplazando el texto
+    y el escudo SVG dibujado a mano.
+  - Colores reales de la marca: bordo `#802927` y beige/arena `#927A56`
+    (la paleta del sitio sigue siendo azul/rojo; si se renombra el logo se
+    podrían alinear los colores en el futuro).
 
 ## Reglas del proyecto
 
@@ -60,3 +70,5 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 - No pagar por servicios: usar herramientas y hosting gratuitos.
 - No copiar textos/fotos/código de otros colegios (solo replicar estructura/estilo).
 - Servir localmente con `npx live-server --port=8080 --no-browser`.
+- `.marca` (encabezado) y `.footer-marca`: usan imágenes en `logos/`; no volver
+  a texto/svg salvo que el usuario lo pida.

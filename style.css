@@ -100,18 +100,17 @@ a {
   padding-bottom: 16px;
 }
 
-.marca-nombre {
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  color: var(--negro);
-  text-transform: uppercase;
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.marca-nombre strong {
-  color: var(--azul);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 19px;
+.marca-logo {
+  width: 150px;
+  height: auto;
+  display: block;
 }
 
 .marca-lema {
@@ -119,7 +118,6 @@ a {
   font-size: 10px;
   color: var(--gris-texto);
   letter-spacing: 2.2px;
-  text-transform: uppercase;
   text-transform: uppercase;
   margin-top: 3px;
 }
@@ -894,15 +892,11 @@ section {
   padding-bottom: 44px;
 }
 
-.footer-nombre {
-  font-size: 19px;
-  color: var(--blanco);
-  text-transform: uppercase;
-}
-
-.footer-nombre strong {
-  color: var(--azul-vivo);
-  font-family: "Space Grotesk", sans-serif;
+.footer-logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  opacity: 0.95;
 }
 
 .footer-lema {
@@ -1381,6 +1375,16 @@ html.js .grid-animada.visible > * {
   }
 }
 
+@media (max-width: 700px) {
+  .marca-logo {
+    width: 120px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+}
+
 /* ---------- Transición entre páginas: escudo girando ---------- */
 .transicion-pagina {
   position: fixed;
@@ -1421,10 +1425,9 @@ html.js .grid-animada.visible > * {
 }
 
 .escudo {
-  width: 118px;
-  height: 118px;
+  width: 130px;
+  height: auto;
   animation: girarCargando 2s linear infinite;
-  transform-box: fill-box;
   transform-origin: center;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
 }
