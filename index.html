@@ -12,6 +12,19 @@
 </head>
 <body>
 
+  <!-- Transición entre páginas -->
+  <div class="transicion-pagina" aria-hidden="true">
+    <div class="escudo-cargando">
+      <span class="anillo-cargando" aria-hidden="true"></span>
+      <svg class="escudo" viewBox="0 0 200 200" aria-hidden="true">
+        <path d="M100 10 L178 42 V96 C178 146 145 175 100 192 C55 175 22 146 22 96 V42 Z" fill="#1c3057" stroke="#a4cbcc" stroke-width="5"/>
+        <path d="M100 34 L157 59 V96 C157 132 132 151 100 164 C68 151 43 132 43 96 V59 Z" fill="#c03227"/>
+        <path d="M86 57 H114 V72 H129 V100 H114 V145 H86 V100 H71 V72 H86 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+    <p class="texto-cargando" role="status">Cargando…</p>
+  </div>
+
   <!-- Barra superior -->
   <div class="topbar">
     <div class="container topbar-inner">
@@ -415,6 +428,25 @@
 
   <script>
     document.documentElement.classList.add("js");
+    const transicion = document.querySelector(".transicion-pagina");
+    if (sessionStorage.getItem("mbp-transicion") === "1") {
+      sessionStorage.removeItem("mbp-transicion");
+      transicion.classList.add("activa");
+      window.addEventListener("load", () => {
+        setTimeout(() => transicion.classList.remove("activa"), 420);
+      });
+    }
+    document.querySelectorAll('a[href*=".html"]').forEach((enlace) => {
+      enlace.addEventListener("click", (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || enlace.target === "_blank") return;
+        e.preventDefault();
+        sessionStorage.setItem("mbp-transicion", "1");
+        transicion.classList.add("activa");
+        setTimeout(() => {
+          window.location.href = enlace.getAttribute("href");
+        }, 480);
+      });
+    });
     const boton = document.getElementById("menuBoton");
     const menu = document.getElementById("menu");
     boton.addEventListener("click", () => {
