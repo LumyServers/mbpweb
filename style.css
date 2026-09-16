@@ -54,6 +54,12 @@ a {
   text-decoration: none;
 }
 
+.icono-svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 /* ---------- Barra superior ---------- */
 .topbar {
   background: var(--azul);
@@ -195,71 +201,16 @@ a {
   color: var(--azul);
 }
 
-.desplegable-ancho {
-  min-width: 480px;
-  display: none;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 6px;
-  padding: 8px;
-}
-
-.con-desplegable:hover .desplegable-ancho,
-.con-desplegable:focus-within .desplegable-ancho {
-  display: grid;
-}
-
-.desplegable-foto {
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.desplegable-foto img {
-  width: 100%;
-  height: 100%;
-  min-height: 190px;
-  object-fit: cover;
-}
-
-.desplegable-foto-texto {
-  position: absolute;
-  inset-inline: 0;
-  bottom: 0;
-  padding: 30px 14px 12px;
-  background: linear-gradient(180deg, transparent, rgba(0, 26, 77, 0.85));
-  color: var(--blanco);
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.desplegable-enlaces {
-  list-style: none;
-  padding: 4px;
-}
-
-.desplegable-enlaces a {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--gris-borde);
-  border-radius: 0;
-}
-
-.desplegable-enlaces a:last-child {
-  border-bottom: none;
-}
-
-.desplegable-enlaces a:hover {
-  background: var(--gris-claro);
-}
-
-.desplegable-enlaces small {
+.desplegable small {
+  display: block;
   color: var(--gris-texto);
   font-size: 11px;
-  white-space: nowrap;
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+.desplegable a:hover small {
+  color: var(--azul);
 }
 
 .menu-iconos {
@@ -278,8 +229,13 @@ a {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  font-size: 16px;
   color: var(--negro);
+}
+
+.icono-nav .icono-svg {
+  width: 20px;
+  height: 20px;
+  margin: auto;
 }
 
 .icono-nav:hover {
@@ -488,43 +444,6 @@ section {
   box-shadow: 0 20px 40px var(--sombra-fuerte);
 }
 
-/* ---------- Pilares ---------- */
-.pilares {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 56px;
-}
-
-.pilar {
-  text-align: center;
-  background: var(--blanco);
-  border: 1px solid var(--gris-borde);
-  border-radius: 8px;
-  padding: 34px 24px;
-  transition: box-shadow 0.2s;
-}
-
-.pilar:hover {
-  box-shadow: 0 12px 28px var(--sombra);
-}
-
-.pilar-icono {
-  font-size: 40px;
-}
-
-.pilar h3 {
-  margin: 14px 0 8px;
-  color: var(--negro);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.pilar p {
-  color: var(--gris-texto);
-  font-size: 14px;
-}
-
 /* ---------- Carrusel horizontal ---------- */
 .carrusel {
   display: flex;
@@ -574,8 +493,12 @@ section {
   height: 52px;
   border-radius: 50%;
   background: var(--gris-claro);
-  font-size: 24px;
   margin-bottom: 14px;
+}
+
+.tarjeta-icono .icono-svg {
+  width: 26px;
+  height: 26px;
 }
 
 .tarjeta h3 {
@@ -873,7 +796,13 @@ section {
 }
 
 .acreditacion-icono {
-  font-size: 30px;
+  display: inline-flex;
+}
+
+.acreditacion-icono .icono-svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
 }
 
 .acreditacion h3 {
@@ -941,7 +870,14 @@ section {
 }
 
 .icono {
-  font-size: 28px;
+  display: inline-flex;
+  margin-bottom: 6px;
+}
+
+.icono .icono-svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
 }
 
 .contacto-item h3 {
@@ -1063,19 +999,9 @@ section {
     padding: 0 0 4px 14px;
   }
 
-  .desplegable-ancho {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding: 0 0 4px 14px;
-    min-width: 0;
-  }
-
-  .desplegable-foto {
-    display: none;
-  }
-
-  .desplegable-enlaces small {
-    display: none;
+  .desplegable small {
+    display: inline;
+    margin-left: 6px;
   }
 
   .menu-iconos {
@@ -1092,7 +1018,6 @@ section {
   }
 
   .bienvenida,
-  .pilares,
   .noticias-grid,
   .pasos,
   .contacto-grid {

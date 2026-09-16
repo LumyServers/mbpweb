@@ -11,6 +11,27 @@
 </head>
 <body>
 
+  <!-- Sprites de iconos SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-usuario" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-grado" viewBox="0 0 24 24"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></symbol>
+    <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></symbol>
+    <symbol id="i-trofeo" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></symbol>
+    <symbol id="i-musica" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="m4.22 4.22 1.42 1.42"/><path d="m18.36 18.36 1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="m4.22 19.78 1.42-1.42"/><path d="m18.36 5.64 1.42-1.42"/></symbol>
+    <symbol id="i-familia" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-bombilla" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/></symbol>
+    <symbol id="i-globo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-libro" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-cruz" viewBox="0 0 24 24"><path d="M11 21h2v-8h8v-2h-8V3h-2v8H3v2h8z"/></symbol>
+    <symbol id="i-docente" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  </svg>
+
   <!-- Barra superior -->
   <div class="topbar">
     <div class="container topbar-inner">
@@ -30,69 +51,45 @@
         <ul class="menu-lista">
           <li class="con-desplegable">
             <a href="#etapas">Etapas educativas <span class="flecha">▾</span></a>
-            <div class="desplegable desplegable-ancho">
-              <div class="desplegable-foto">
-                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=600&q=80" alt="Estudiantes de inicial">
-                <span class="desplegable-foto-texto">De la cuna a la secundaria</span>
-              </div>
-              <ul class="desplegable-enlaces">
-                <li><a href="#etapas">Cuna <small>De 0 a 2 años</small></a></li>
-                <li><a href="#etapas">Inicial <small>De 3 a 5 años</small></a></li>
-                <li><a href="#etapas">Primaria <small>De 6 a 11 años</small></a></li>
-                <li><a href="#etapas">Secundaria <small>De 12 a 17 años</small></a></li>
-              </ul>
+            <div class="desplegable">
+              <a href="#etapas">Cuna <small>De 0 a 2 años</small></a>
+              <a href="#etapas">Inicial <small>De 3 a 5 años</small></a>
+              <a href="#etapas">Primaria <small>De 6 a 11 años</small></a>
+              <a href="#etapas">Secundaria <small>De 12 a 17 años</small></a>
             </div>
           </li>
           <li class="con-desplegable">
             <a href="#admision">Admisiones <span class="flecha">▾</span></a>
-            <div class="desplegable desplegable-ancho">
-              <div class="desplegable-foto">
-                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" alt="Instalaciones del colegio">
-                <span class="desplegable-foto-texto">Matrícula abierta todo el año</span>
-              </div>
-              <ul class="desplegable-enlaces">
-                <li><a href="#admision">Proceso de admisión</a></li>
-                <li><a href="#admision">Matrícula 2026</a></li>
-                <li><a href="#contacto">Solicita información</a></li>
-                <li><a href="#contacto">Agenda una visita</a></li>
-              </ul>
+            <div class="desplegable">
+              <a href="#admision">Proceso de admisión</a>
+              <a href="#admision">Matrícula 2026</a>
+              <a href="#contacto">Solicita información</a>
+              <a href="#contacto">Agenda una visita</a>
             </div>
           </li>
           <li class="con-desplegable">
             <a href="#colegio">Nuestro colegio <span class="flecha">▾</span></a>
-            <div class="desplegable desplegable-ancho">
-              <div class="desplegable-foto">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Estudiantes en clase">
-                <span class="desplegable-foto-texto">Educando con amor y fe</span>
-              </div>
-              <ul class="desplegable-enlaces">
-                <li><a href="#colegio">¿Por qué elegirnos?</a></li>
-                <li><a href="#directora">Nuestro equipo</a></li>
-                <li><a href="#etapas">Instalaciones</a></li>
-                <li><a href="#noticias">Vida escolar</a></li>
-              </ul>
+            <div class="desplegable">
+              <a href="#colegio">¿Por qué elegirnos?</a>
+              <a href="#directora">Nuestro equipo</a>
+              <a href="#etapas">Instalaciones</a>
+              <a href="#noticias">Vida escolar</a>
             </div>
           </li>
           <li class="con-desplegable">
             <a href="#noticias">Noticias y eventos <span class="flecha">▾</span></a>
-            <div class="desplegable desplegable-ancho">
-              <div class="desplegable-foto">
-                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&q=80" alt="Noticias del colegio">
-                <span class="desplegable-foto-texto">¿Qué está pasando?</span>
-              </div>
-              <ul class="desplegable-enlaces">
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#noticias">Eventos</a></li>
-                <li><a href="#directora">Preguntas frecuentes</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
-              </ul>
+            <div class="desplegable">
+              <a href="#noticias">Noticias</a>
+              <a href="#noticias">Eventos</a>
+              <a href="#directora">Preguntas frecuentes</a>
+              <a href="#contacto">Contáctanos</a>
             </div>
           </li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
         <div class="menu-iconos">
-          <a href="#contacto" class="icono-nav" title="Ubicación del colegio">📍</a>
-          <a href="#contacto" class="icono-nav" title="Portal del estudiante">👤</a>
+          <a href="#contacto" class="icono-nav" title="Ubicación del colegio"><svg class="icono-svg"><use href="#i-pin"/></svg></a>
+          <a href="#contacto" class="icono-nav" title="Portal del estudiante"><svg class="icono-svg"><use href="#i-usuario"/></svg></a>
           <span class="icono-nav idioma" title="Idioma">ES</span>
         </div>
       </nav>
@@ -152,24 +149,6 @@
         </div>
       </div>
 
-      <div class="pilares">
-        <div class="pilar">
-          <span class="pilar-icono">🎓</span>
-          <h3>Excelencia académica</h3>
-          <p>Programas sólidos que desarrollan el pensamiento y el conocimiento.</p>
-        </div>
-        <div class="pilar">
-          <span class="pilar-icono">❤️</span>
-          <h3>Formación en valores</h3>
-          <p>Amor, respeto y responsabilidad como base de la convivencia.</p>
-        </div>
-        <div class="pilar">
-          <span class="pilar-icono">🎨</span>
-          <h3>Talento y creatividad</h3>
-          <p>Arte, deporte y cultura para descubrir el potencial de cada alumno.</p>
-        </div>
-      </div>
-
       <p class="intro-etapas intro-centro">
         La propuesta educativa de Mi Buen Pastor gira en torno a valores que
         acompañan a los estudiantes toda la vida.
@@ -177,42 +156,42 @@
 
       <div class="carrusel">
         <div class="tarjeta">
-          <span class="tarjeta-icono">🎓</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-grado"/></svg></span>
           <h3>Excelencia académica</h3>
           <p>Programas sólidos que desarrollan el pensamiento y el conocimiento.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">❤️</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-corazon"/></svg></span>
           <h3>Amor y fe</h3>
           <p>Una educación con valores cristianos que forma el corazón.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">⚽</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-trofeo"/></svg></span>
           <h3>Deporte y salud</h3>
           <p>Torneos internos, educación física y hábitos de vida sana.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">🎨</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-musica"/></svg></span>
           <h3>Arte y cultura</h3>
           <p>Música, danza y talleres para descubrir el talento de cada alumno.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">🙏</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-sol"/></svg></span>
           <h3>Cuidado pastoral</h3>
           <p>Acompañamiento espiritual y orientación personal constante.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">👨‍👩‍👧</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-familia"/></svg></span>
           <h3>Familia y comunidad</h3>
           <p>Escuela de padres y una comunidad unida en torno al aprendizaje.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">🧠</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-bombilla"/></svg></span>
           <h3>Pensamiento crítico</h3>
           <p>Estudiantes que aprenden a razonar, preguntar y decidir.</p>
         </div>
         <div class="tarjeta">
-          <span class="tarjeta-icono">🌍</span>
+          <span class="tarjeta-icono"><svg class="icono-svg"><use href="#i-globo"/></svg></span>
           <h3>Servicio al prójimo</h3>
           <p>Jóvenes comprometidos con su comunidad y con el mundo.</p>
         </div>
@@ -411,27 +390,27 @@
 
       <div class="acreditaciones-grid">
         <div class="acreditacion">
-          <span class="acreditacion-icono">📘</span>
+          <span class="acreditacion-icono"><svg class="icono-svg"><use href="#i-libro"/></svg></span>
           <h3>Currículo nacional</h3>
           <p>Alineados al currículo nacional del Ministerio de Educación.</p>
         </div>
         <div class="acreditacion">
-          <span class="acreditacion-icono">✝️</span>
+          <span class="acreditacion-icono"><svg class="icono-svg"><use href="#i-cruz"/></svg></span>
           <h3>Identidad cristiana</h3>
           <p>Formación espiritual y valores en el marco de la fe.</p>
         </div>
         <div class="acreditacion">
-          <span class="acreditacion-icono">🧑‍🏫</span>
+          <span class="acreditacion-icono"><svg class="icono-svg"><use href="#i-docente"/></svg></span>
           <h3>Docentes capacitados</h3>
           <p>Equipo docente en constante formación y actualización.</p>
         </div>
         <div class="acreditacion">
-          <span class="acreditacion-icono">🛡️</span>
+          <span class="acreditacion-icono"><svg class="icono-svg"><use href="#i-escudo"/></svg></span>
           <h3>Ambiente seguro</h3>
           <p>Espacios cuidados y protocolos que protegen a cada estudiante.</p>
         </div>
         <div class="acreditacion">
-          <span class="acreditacion-icono">🤝</span>
+          <span class="acreditacion-icono"><svg class="icono-svg"><use href="#i-casa"/></svg></span>
           <h3>Familia presente</h3>
           <p>Escuela de padres y participación activa de la comunidad.</p>
         </div>
@@ -458,17 +437,17 @@
 
       <div class="contacto-grid">
         <div class="contacto-item">
-          <span class="icono">📍</span>
+          <span class="icono"><svg class="icono-svg"><use href="#i-pin"/></svg></span>
           <h3>Dirección</h3>
           <p>Pasaje Los Gaviones Mz. 109b Lte 2</p>
         </div>
         <div class="contacto-item">
-          <span class="icono">📞</span>
+          <span class="icono"><svg class="icono-svg"><use href="#i-telefono"/></svg></span>
           <h3>Teléfono</h3>
           <p><a href="tel:945454081" class="tel-enlace">945 454 081</a></p>
         </div>
         <div class="contacto-item">
-          <span class="icono">✉️</span>
+          <span class="icono"><svg class="icono-svg"><use href="#i-correo"/></svg></span>
           <h3>Correo</h3>
           <p>contacto@mibuenpastor.edu</p>
         </div>
