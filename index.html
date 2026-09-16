@@ -86,7 +86,14 @@
 
   <!-- Portada -->
   <section id="inicio" class="hero">
-    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80" alt="Estudiantes en clase" class="hero-imagen">
+    <div class="hero-imagen" id="heroDiapositivas" aria-hidden="true">
+      <img src="fotos/galeria/galeria-1.jpg" alt="" class="hero-diapositiva activa">
+      <img src="fotos/galeria/galeria-2.jpg" alt="" class="hero-diapositiva">
+      <img src="fotos/galeria/galeria-3.jpg" alt="" class="hero-diapositiva">
+      <img src="fotos/galeria/galeria-4.jpg" alt="" class="hero-diapositiva">
+      <img src="fotos/galeria/galeria-5.jpg" alt="" class="hero-diapositiva">
+      <img src="fotos/galeria/galeria-6.jpg" alt="" class="hero-diapositiva">
+    </div>
     <div class="hero-fondo"></div>
     <div class="container hero-contenido">
       <p class="hero-frase">Excelencia académica. Formación en valores. Visión global.</p>
@@ -140,34 +147,7 @@
           </p>
         </div>
         <div class="bienvenida-imagen">
-          <div class="galeria" id="galeriaBienvenida">
-            <div class="galeria-diapositiva activa" role="group" aria-label="Foto 1 de 6">
-              <img src="fotos/galeria/galeria-1.jpg" alt="Estudiantes del colegio" loading="lazy">
-            </div>
-            <div class="galeria-diapositiva" role="group" aria-label="Foto 2 de 6" aria-hidden="true">
-              <img src="fotos/galeria/galeria-2.jpg" alt="Estudiantes del colegio" loading="lazy">
-            </div>
-            <div class="galeria-diapositiva" role="group" aria-label="Foto 3 de 6" aria-hidden="true">
-              <img src="fotos/galeria/galeria-3.jpg" alt="Estudiantes del colegio" loading="lazy">
-            </div>
-            <div class="galeria-diapositiva" role="group" aria-label="Foto 4 de 6" aria-hidden="true">
-              <img src="fotos/galeria/galeria-4.jpg" alt="Estudiantes del colegio" loading="lazy">
-            </div>
-            <div class="galeria-diapositiva" role="group" aria-label="Foto 5 de 6" aria-hidden="true">
-              <img src="fotos/galeria/galeria-5.jpg" alt="Estudiantes del colegio" loading="lazy">
-            </div>
-            <div class="galeria-diapositiva" role="group" aria-label="Foto 6 de 6" aria-hidden="true">
-              <img src="fotos/galeria/galeria-6.jpg" alt="Estudiantes del colegio" loading="lazy">
-            </div>
-          </div>
-          <div class="galeria-puntos" role="tablist" aria-label="Galería de fotos del colegio">
-            <button type="button" class="punto activa" aria-label="Foto 1" data-ir="0"></button>
-            <button type="button" class="punto" aria-label="Foto 2" data-ir="1"></button>
-            <button type="button" class="punto" aria-label="Foto 3" data-ir="2"></button>
-            <button type="button" class="punto" aria-label="Foto 4" data-ir="3"></button>
-            <button type="button" class="punto" aria-label="Foto 5" data-ir="4"></button>
-            <button type="button" class="punto" aria-label="Foto 6" data-ir="5"></button>
-          </div>
+          <img src="fotos/galeria/galeria-3.jpg" alt="Estudiantes de la I.E.P MI BUEN PASTOR">
         </div>
       </div>
 
@@ -499,36 +479,19 @@
         });
       }, { passive: true });
     }
-    const galeriaBienvenida = document.getElementById("galeriaBienvenida");
-    if (galeriaBienvenida) {
-      const diapositivas = galeriaBienvenida.querySelectorAll(".galeria-diapositiva");
-      const puntos = document.querySelectorAll(".punto");
+    const heroDiapositivas = document.getElementById("heroDiapositivas");
+    if (heroDiapositivas) {
+      const capas = heroDiapositivas.querySelectorAll(".hero-diapositiva");
       const prefiereMenosMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)");
-      let actualBienvenida = 0;
-      let temporizadorGaleria = null;
-      const irA = (n) => {
-        actualBienvenida = (n + diapositivas.length) % diapositivas.length;
-        diapositivas.forEach((d, i) => {
-          d.classList.toggle("activa", i === actualBienvenida);
-          d.setAttribute("aria-hidden", i === actualBienvenida ? "false" : "true");
-        });
-        puntos.forEach((p, i) => p.classList.toggle("activa", i === actualBienvenida));
+      let actualHero = 0;
+      const avanzarHero = () => {
+        capas[actualHero].classList.remove("activa");
+        actualHero = (actualHero + 1) % capas.length;
+        capas[actualHero].classList.add("activa");
       };
-      puntos.forEach((p, i) => p.addEventListener("click", () => irA(i)));
-      const detenerGaleria = () => {
-        if (temporizadorGaleria) { clearInterval(temporizadorGaleria); temporizadorGaleria = null; }
-      };
-      const iniciarGaleria = () => {
-        if (prefiereMenosMovimiento.matches || diapositivas.length < 2) return;
-        detenerGaleria();
-        temporizadorGaleria = setInterval(() => irA(actualBienvenida + 1), 4000);
-      };
-      galeriaBienvenida.addEventListener("mouseenter", detenerGaleria);
-      galeriaBienvenida.addEventListener("mouseleave", iniciarGaleria);
-      galeriaBienvenida.addEventListener("focusin", detenerGaleria);
-      galeriaBienvenida.addEventListener("focusout", iniciarGaleria);
-      irA(0);
-      iniciarGaleria();
+      if (!prefiereMenosMovimiento.matches && capas.length > 1) {
+        setInterval(avanzarHero, 4500);
+      }
     }
     const atenciones = document.querySelectorAll(".atencion");
     atenciones.forEach((cta) => {
