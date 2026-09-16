@@ -12,18 +12,20 @@ Sitio público de una sola página (`index.html` + `style.css`) inspirado en la
 estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 
 - Menú superior con desplegables (Etapas educativas, Admisiones, Nuestro colegio,
-  Noticias y eventos, Contacto) más iconos de ubicación, portal e idioma.
+  Noticias y eventos) más iconos de ubicación, portal e idioma.
 - Animaciones: entrada de secciones al hacer scroll (IntersectionObserver +
   @keyframes), entrada del hero, transiciones suaves en hover de tarjetas,
-  imágenes, pasos, contacto, enlaces, botones y subrayado animado del menú.
+  imágenes, pasos, enlaces, botones y subrayado animado del menú.
   Respetan `prefers-reduced-motion`.
 - 16 elementos con `data-animar` (títulos y grillas) revelados con
   `cubic-bezier(0.22, 1, 0.36, 1)` y retraso escalonado vía `--a`.
 - Portada con foto y superposición azul, cinta de cifras, bienvenida,
-  franja de valores con desplazamiento suave (iconos SVG, se pausa al pasar
-  el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), directora,
-  proceso de admisión en 7 pasos, noticias, testimonios "¿Qué nos diferencia?",
-  banner "Pide información", contacto y pie de página.
+  franja de valores con desplazamiento suave (iconos Font Awesome, se pausa
+  al pasar el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), directora,
+  proceso de admisión en 4 pasos (Contacto inicial, Inscripción, Matrícula,
+  ¡Bienvenidos!), noticias, testimonios "¿Qué nos diferencia?",
+  banner "Pide información" y pie de página (la sección Contacto fue
+  eliminada; los enlaces apuntan a #admision y los datos quedan en el pie).
 - Paleta real de St. George's: azul colegial `#1c3057`, azul oscuro `#001a4d`,
   fondo claro `#e6eeff`, botones rojo `#c03227`, acento celeste `#a4cbcc`,
   blanco. Fuentes: Inter (texto) y Space Grotesk (títulos).

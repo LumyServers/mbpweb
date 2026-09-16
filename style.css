@@ -878,51 +878,6 @@ section {
   background: #932316;
 }
 
-/* ---------- Contacto ---------- */
-.contacto-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  text-align: center;
-}
-
-.contacto-item {
-  background: var(--blanco);
-  border: 1px solid var(--gris-borde);
-  border-radius: 8px;
-  padding: 34px 24px;
-}
-
-.icono {
-  display: inline-flex;
-  margin-bottom: 6px;
-}
-
-.icono i {
-  font-size: 26px;
-  color: var(--azul);
-}
-
-.contacto-item h3 {
-  margin: 12px 0 6px;
-  color: var(--negro);
-  font-size: 16px;
-}
-
-.contacto-item p {
-  color: var(--gris-texto);
-  font-size: 14px;
-}
-
-.tel-enlace {
-  color: var(--azul);
-  font-weight: 700;
-}
-
-.tel-enlace:hover {
-  color: var(--azul-vivo-oscuro);
-}
-
 /* ---------- Pie de página ---------- */
 .footer {
   background: var(--azul-oscuro);
@@ -1042,8 +997,7 @@ section {
 
   .bienvenida,
   .noticias-grid,
-  .pasos,
-  .contacto-grid {
+  .pasos {
     grid-template-columns: 1fr;
   }
 
@@ -1109,13 +1063,11 @@ section {
   transform: scale(1.07);
 }
 
-.paso,
-.contacto-item {
+.paso {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.paso:hover,
-.contacto-item:hover {
+.paso:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 28px var(--sombra-fuerte);
 }
@@ -1205,8 +1157,7 @@ html.js [data-animar] {
 
   .etapa:hover,
   .noticia:hover,
-  .paso:hover,
-  .contacto-item:hover {
+  .paso:hover {
     transform: none;
   }
 }
