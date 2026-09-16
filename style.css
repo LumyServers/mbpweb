@@ -124,31 +124,104 @@ a {
 .menu {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
-.menu a {
+.menu-lista {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+}
+
+.menu-lista > li {
+  position: relative;
+}
+
+.menu-lista > li > a {
+  display: block;
   color: var(--negro);
-  padding: 8px 14px;
+  padding: 10px 12px;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.3px;
   border-radius: 8px;
+  white-space: nowrap;
 }
 
-.menu a:hover:not(.matricula) {
+.menu-lista > li > a:hover {
   background: #f1f1ee;
   color: var(--azul);
 }
 
-.matricula {
-  background: var(--azul-vivo);
-  color: var(--negro);
-  font-weight: 700;
+.flecha {
+  font-size: 11px;
+  margin-left: 3px;
 }
 
-.matricula:hover {
-  background: var(--azul-vivo-oscuro);
+.desplegable {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  box-shadow: 0 14px 32px var(--sombra-fuerte);
+  list-style: none;
+  padding: 8px;
+  margin-top: 4px;
+  display: none;
+  z-index: 200;
+}
+
+.con-desplegable:hover .desplegable {
+  display: block;
+}
+
+.desplegable a {
+  display: block;
+  color: var(--negro);
+  padding: 9px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.desplegable a:hover {
+  background: var(--gris-claro);
+  color: var(--azul);
+}
+
+.menu-iconos {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  border-left: 1px solid var(--gris-borde);
+}
+
+.icono-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--negro);
+}
+
+.icono-nav:hover {
+  background: #f1f1ee;
+  color: var(--azul);
+}
+
+.idioma {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .menu-boton {
@@ -722,17 +795,43 @@ section {
   .menu {
     display: none;
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
-    gap: 6px;
-    padding: 14px 0 6px;
+    gap: 4px;
+    padding: 14px 0 10px;
   }
 
   .menu.abierto {
     display: flex;
   }
 
-  .menu a {
-    padding: 10px 12px;
+  .menu-lista {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .menu-lista > li > a {
+    padding: 11px 12px;
+    border-radius: 8px;
+  }
+
+  .desplegable {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0 0 4px 14px;
+  }
+
+  .menu-iconos {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    padding-top: 8px;
+    margin-top: 4px;
+    border-top: 1px solid var(--gris-borde);
   }
 
   .menu-boton {
