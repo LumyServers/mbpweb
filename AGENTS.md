@@ -55,7 +55,7 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   `fotos/galeria/` (galería/uso general, `galeria-N.jpg`), `fotos/directora.jpg`
   y fotos de etapas (`cuna.jpg`, `portada-inicial.jpg`, `primaria.jpg`,
   `secundaria.jpg`). El hero referencia `hero-1..hero-7.jpg`; la imagen lateral
-  del colegio usa `fotos/galeria/galeria-3.jpg`.
+  del colegio usa `fotos/galeria/galeria-1.jpg`.
 - Logos oficiales del colegio (propios del colegio, sin copyright):
   - Fuente original en `MiPastor Since 2014/` (PNG, JPG, Editables .ai/.eps).
   - Copias web en `logos/`: `logo-horizontal.png` (color, sobre blanco),
