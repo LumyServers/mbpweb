@@ -114,3 +114,8 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 - Servir localmente con `npx live-server --port=8080 --no-browser`.
 - `.marca` (encabezado) y `.footer-marca`: usan imágenes en `logos/`; no volver
   a texto/svg salvo que el usuario lo pida.
+- La página pública se mantiene SIEMPRE en HTML/CSS/JS vanilla (sin React,
+  Tailwind ni build). Para componentes o animaciones vistos en otros proyectos
+  (por ej. Rare UI), copiar la idea y portarla a CSS/JS vanilla: mismo efecto
+  visual, sin la complejidad. La intranet/aula virtual futura sí podrá usar
+  React y su propio stack.
