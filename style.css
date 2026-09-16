@@ -1135,3 +1135,126 @@ section {
     font-size: 30px;
   }
 }
+
+/* ---------- Transiciones y animaciones ---------- */
+.etapa,
+.noticia {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.etapa:hover,
+.noticia:hover {
+  transform: translateY(-6px);
+}
+
+.etapa-imagen,
+.noticia-imagen {
+  transition: transform 0.5s ease;
+}
+
+.etapa:hover .etapa-imagen,
+.noticia:hover .noticia-imagen {
+  transform: scale(1.07);
+}
+
+.paso,
+.contacto-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paso:hover,
+.contacto-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px var(--sombra-fuerte);
+}
+
+.menu-lista > li > a {
+  position: relative;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-lista > li > a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: 4px;
+  height: 2px;
+  width: calc(100% - 24px);
+  background: var(--azul-vivo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.menu-lista > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+.enlace {
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.enlace:hover {
+  transform: translateX(4px);
+}
+
+.btn-primario,
+.btn-secondary,
+.btn-cta {
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primario:hover,
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+/* Entrada de secciones al hacer scroll */
+html.js [data-animar] {
+  opacity: 0;
+}
+
+[data-animar].visible {
+  animation: aparecerArriba 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--a, 0) * 0.12s);
+}
+
+@keyframes aparecerArriba {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-contenido {
+  animation: aparecerArriba 1s ease-out 0.2s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-contenido,
+  .valores-pista {
+    animation: none;
+  }
+
+  html.js [data-animar] {
+    opacity: 1;
+    transform: none;
+  }
+
+  [data-animar].visible {
+    animation: none;
+  }
+
+  .etapa:hover,
+  .noticia:hover,
+  .paso:hover,
+  .contacto-item:hover {
+    transform: none;
+  }
+}

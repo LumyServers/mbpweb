@@ -11,8 +11,14 @@ Sitio web para el colegio **I.E.P Mi Buen Pastor**. Objetivos generales:
 Sitio público de una sola página (`index.html` + `style.css`) inspirado en la
 estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 
-- Menú superior con megamenu (Foto + enlaces) en cada desplegable: Etapas
-  educativas, Admisiones, Nuestro colegio, Noticias y eventos, Contacto.
+- Menú superior con desplegables (Etapas educativas, Admisiones, Nuestro colegio,
+  Noticias y eventos, Contacto) más iconos de ubicación, portal e idioma.
+- Animaciones: entrada de secciones al hacer scroll (IntersectionObserver +
+  @keyframes), entrada del hero, transiciones suaves en hover de tarjetas,
+  imágenes, pasos, contacto, enlaces, botones y subrayado animado del menú.
+  Respetan `prefers-reduced-motion`.
+- 16 elementos con `data-animar` (títulos y grillas) revelados con
+  `cubic-bezier(0.22, 1, 0.36, 1)` y retraso escalonado vía `--a`.
 - Portada con foto y superposición azul, cinta de cifras, bienvenida,
   franja de valores con desplazamiento suave (iconos SVG, se pausa al pasar
   el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), directora,

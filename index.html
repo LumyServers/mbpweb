@@ -122,7 +122,7 @@
 
   <!-- Cifras -->
   <section class="cinta">
-    <div class="container cinta-grid">
+    <div class="container cinta-grid" data-animar>
       <div class="cinta-item"><h3>14</h3><p>Años de trayectoria</p></div>
       <div class="cinta-item"><h3>7</h3><p>Docentes calificados</p></div>
       <div class="cinta-item"><h3>3</h3><p>Niveles educativos</p></div>
@@ -133,10 +133,10 @@
   <!-- El colegio -->
   <section id="colegio">
     <div class="container">
-      <h2 class="titulo-seccion">¡Bienvenidos a Mi Buen Pastor!</h2>
+      <h2 class="titulo-seccion" data-animar>¡Bienvenidos a Mi Buen Pastor!</h2>
       <p class="subtitulo">Un lugar donde los sueños de tus hijos comienzan a hacerse realidad.</p>
 
-      <div class="bienvenida">
+      <div class="bienvenida" data-animar style="--a:1">
         <div class="bienvenida-texto">
           <p>
             Nuestra institución acompaña a cada estudiante en su desarrollo con una
@@ -237,7 +237,7 @@
   <!-- Etapas educativas -->
   <section id="etapas" class="seccion-gris">
     <div class="container">
-      <h2 class="titulo-seccion">Etapas educativas</h2>
+      <h2 class="titulo-seccion" data-animar>Etapas educativas</h2>
       <p class="subtitulo">Acompañamos a cada estudiante desde sus primeros pasos hasta la secundaria.</p>
 
       <p class="intro-etapas">
@@ -247,7 +247,7 @@
         habilidades, fortalezcan su fe y se preparen para los desafíos del futuro.
       </p>
 
-      <div class="etapas-grid">
+      <div class="etapas-grid" data-animar style="--a:1">
         <div class="etapa">
           <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Etapa cuna" class="etapa-imagen">
           <div class="etapa-info">
@@ -290,7 +290,7 @@
 
   <!-- Palabras de la directora -->
   <section id="directora">
-    <div class="container directora-grid">
+    <div class="container directora-grid" data-animar>
       <div class="directora-imagen">
         <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=800&q=80" alt="Directora del colegio" class="img-redonda">
       </div>
@@ -305,10 +305,10 @@
   <!-- Proceso de admisión -->
   <section id="admision">
     <div class="container">
-      <h2 class="titulo-seccion">Proceso de admisión</h2>
+      <h2 class="titulo-seccion" data-animar>Proceso de admisión</h2>
       <p class="subtitulo">Mira lo fácil que es unirte a nuestra comunidad.</p>
 
-      <div class="pasos">
+      <div class="pasos" data-animar style="--a:1">
         <div class="paso">
           <span class="paso-numero">01</span>
           <h3>Contacto inicial</h3>
@@ -351,10 +351,10 @@
   <!-- Noticias -->
   <section id="noticias" class="seccion-gris">
     <div class="container">
-      <h2 class="titulo-seccion">Noticias y eventos</h2>
+      <h2 class="titulo-seccion" data-animar>Noticias y eventos</h2>
       <p class="subtitulo">Lo que está pasando en nuestro colegio.</p>
 
-      <div class="noticias-grid">
+      <div class="noticias-grid" data-animar style="--a:1">
         <article class="noticia">
           <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80" alt="Inicio del año escolar" class="noticia-imagen">
           <div class="noticia-cuerpo">
@@ -389,10 +389,10 @@
   <!-- Testimonios -->
   <section id="testimonios">
     <div class="container">
-      <h2 class="titulo-seccion">¿Qué nos diferencia?</h2>
+      <h2 class="titulo-seccion" data-animar>¿Qué nos diferencia?</h2>
       <p class="subtitulo">Escucha a quienes ya forman parte de nuestra comunidad.</p>
 
-      <div class="carrusel">
+      <div class="carrusel" data-animar style="--a:1">
         <div class="testimonio">
           <p class="testimonio-cita">“Mis hijos llegaron tímidos y hoy participan con seguridad. Los docentes los conocen por su nombre y los quieren de verdad.”</p>
           <p class="testimonio-nombre">María Fernández</p>
@@ -420,21 +420,21 @@
   <!-- Llamado a la acción: matrícula -->
   <section class="cta">
     <div class="container cta-inner">
-      <div class="cta-texto">
+      <div class="cta-texto" data-animar>
         <h2>¡Tu hijo tiene un lugar aquí!</h2>
         <p>Inscripciones abiertas para el año escolar 2026.</p>
       </div>
-      <a href="#contacto" class="btn-cta">Pide información</a>
+      <a href="#contacto" class="btn-cta" data-animar style="--a:1">Pide información</a>
     </div>
   </section>
 
   <!-- Contacto -->
   <section id="contacto">
     <div class="container">
-      <h2 class="titulo-seccion">Contacto</h2>
+      <h2 class="titulo-seccion" data-animar>Contacto</h2>
       <p class="subtitulo">Estamos para atenderte.</p>
 
-      <div class="contacto-grid">
+      <div class="contacto-grid" data-animar style="--a:1">
         <div class="contacto-item">
           <span class="icono"><svg class="icono-svg"><use href="#i-pin"/></svg></span>
           <h3>Dirección</h3>
@@ -488,11 +488,22 @@
   </footer>
 
   <script>
+    document.documentElement.classList.add("js");
     const boton = document.getElementById("menuBoton");
     const menu = document.getElementById("menu");
     boton.addEventListener("click", () => {
       menu.classList.toggle("abierto");
     });
+    const animables = document.querySelectorAll("[data-animar]");
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("visible");
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    animables.forEach((el) => observador.observe(el));
   </script>
 </body>
 </html>
