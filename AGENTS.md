@@ -51,7 +51,12 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   `inicial.html`, `primaria.html`, `secundaria.html`). Todas comparten
   `style.css` con clases `.pagina-*` y los enlaces "Saber más" de cada tarjeta
   llevan a su página.
-- Logos oficiales del colegio (fillos del propio colegio, sin copyright):
+- Fotos propias: `fotos/hero/` (fondo rotativo del hero, `hero-N.jpg`),
+  `fotos/galeria/` (galería/uso general, `galeria-N.jpg`), `fotos/directora.jpg`
+  y fotos de etapas (`cuna.jpg`, `portada-inicial.jpg`, `primaria.jpg`,
+  `secundaria.jpg`). El hero referencia `hero-1..hero-7.jpg`; la imagen lateral
+  del colegio usa `fotos/galeria/galeria-3.jpg`.
+- Logos oficiales del colegio (propios del colegio, sin copyright):
   - Fuente original en `MiPastor Since 2014/` (PNG, JPG, Editables .ai/.eps).
   - Copias web en `logos/`: `logo-horizontal.png` (color, sobre blanco),
     `logo-horizontal-negativo.png` (blanco, sobre navy), `logo-vertical-negativo.png`
