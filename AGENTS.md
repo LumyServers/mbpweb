@@ -14,9 +14,10 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 - Menú superior con megamenu (Foto + enlaces) en cada desplegable: Etapas
   educativas, Admisiones, Nuestro colegio, Noticias y eventos, Contacto.
 - Portada con foto y superposición azul, cinta de cifras, bienvenida,
-  carrusel de valores, etapas (Cuna/Inicial/Primaria/Secundaria), directora,
+  franja de valores con desplazamiento suave (iconos SVG, se pausa al pasar
+  el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), directora,
   proceso de admisión en 7 pasos, noticias, testimonios "¿Qué nos diferencia?",
-  acreditaciones, banner "Pide información", contacto y pie de página.
+  banner "Pide información", contacto y pie de página.
 - Paleta real de St. George's: azul colegial `#1c3057`, azul oscuro `#001a4d`,
   fondo claro `#e6eeff`, botones rojo `#c03227`, acento celeste `#a4cbcc`,
   blanco. Fuentes: Inter (texto) y Space Grotesk (títulos).
