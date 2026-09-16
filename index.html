@@ -7,35 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Sprites de iconos SVG -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-    <symbol id="i-usuario" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
-    <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-    <symbol id="i-correo" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
-    <symbol id="i-grado" viewBox="0 0 24 24"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></symbol>
-    <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></symbol>
-    <symbol id="i-trofeo" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></symbol>
-    <symbol id="i-musica" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
-    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="m4.22 4.22 1.42 1.42"/><path d="m18.36 18.36 1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="m4.22 19.78 1.42-1.42"/><path d="m18.36 5.64 1.42-1.42"/></symbol>
-    <symbol id="i-familia" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
-    <symbol id="i-bombilla" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/></symbol>
-    <symbol id="i-globo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
-    <symbol id="i-libro" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
-    <symbol id="i-cruz" viewBox="0 0 24 24"><path d="M11 21h2v-8h8v-2h-8V3h-2v8H3v2h8z"/></symbol>
-    <symbol id="i-docente" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
-    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
-    <symbol id="i-casa" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
-    <symbol id="i-medalla" viewBox="0 0 24 24"><circle cx="12" cy="14" r="6"/><path d="m8.8 8.6-1-5.2L12 7l4.2-3.6-1 5.2"/></symbol>
-    <symbol id="i-actividad" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
-    <symbol id="i-paleta" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.7 0 2.5-.8 2.5-1.8 0-1.2-1-1.7-1-2.8 0-1 .8-1.6 1.9-1.6h1.4C19 14.8 21 13.4 21 9.5 21 5.9 17.4 3 12 3Z"/><circle cx="7.5" cy="10.5" r="1" fill="currentColor"/><circle cx="12" cy="7.5" r="1" fill="currentColor"/><circle cx="16.5" cy="10.5" r="1" fill="currentColor"/></symbol>
-    <symbol id="i-meta" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-    <symbol id="i-brote" viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12C12 7 10 4 5 4c0 4 2 8 7 8Z"/><path d="M12 12c0-5 2-8 7-8 0 4-2 8-7 8Z"/></symbol>
-  </svg>
 
   <!-- Barra superior -->
   <div class="topbar">
@@ -93,8 +68,8 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
         <div class="menu-iconos">
-          <a href="#contacto" class="icono-nav" title="Ubicación del colegio"><svg class="icono-svg"><use href="#i-pin"/></svg></a>
-          <a href="#contacto" class="icono-nav" title="Portal del estudiante"><svg class="icono-svg"><use href="#i-usuario"/></svg></a>
+          <a href="#contacto" class="icono-nav" title="Ubicación del colegio"><i class="fa-solid fa-location-dot"></i></a>
+          <a href="#contacto" class="icono-nav" title="Portal del estudiante"><i class="fa-solid fa-user"></i></a>
           <span class="icono-nav idioma" title="Idioma">ES</span>
         </div>
       </nav>
@@ -139,14 +114,10 @@
       <div class="bienvenida" data-animar style="--a:1">
         <div class="bienvenida-texto">
           <p>
-            Nuestra institución acompaña a cada estudiante en su desarrollo con una
-            pedagogía que une la excelencia académica y los valores cristianos.
-            Contamos con aulas modernas, áreas de recreación y un equipo docente
-            comprometido con el éxito de cada alumno.
-          </p>
-          <p>
-            Creemos en una educación que forma personas íntegras: estudiantes que
-            aprendan a pensar, a servir y a crecer con fe.
+            Con 14 años de trayectoria en Atalaya, acompañamos a cada estudiante
+            con una pedagogía que une la excelencia académica y la formación en
+            valores cristianos, formando personas íntegras que aprenden a pensar,
+            a servir y a crecer con fe.
           </p>
         </div>
         <div class="bienvenida-imagen">
@@ -155,77 +126,76 @@
       </div>
 
       <p class="intro-etapas intro-centro">
-        La propuesta educativa de Mi Buen Pastor gira en torno a valores que
-        acompañan a los estudiantes toda la vida.
+        Valores que acompañan a los estudiantes toda la vida.
       </p>
 
       <div class="valores">
         <div class="valores-pista">
           <ul class="valores-grupo">
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-medalla"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-graduation-cap"></i></span>
             <span class="valor-texto"><strong>Excelencia académica</strong><small>Programas sólidos que desarrollan el pensamiento y el conocimiento.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-corazon"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-heart"></i></span>
             <span class="valor-texto"><strong>Amor y fe</strong><small>Una educación con valores cristianos que forma el corazón.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-actividad"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-basketball"></i></span>
             <span class="valor-texto"><strong>Deporte y salud</strong><small>Torneos internos, educación física y hábitos de vida sana.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-paleta"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-palette"></i></span>
             <span class="valor-texto"><strong>Arte y cultura</strong><small>Música, danza y talleres para descubrir el talento de cada alumno.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-cruz"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-hands-praying"></i></span>
             <span class="valor-texto"><strong>Cuidado pastoral</strong><small>Acompañamiento espiritual y orientación personal constante.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-casa"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-users"></i></span>
             <span class="valor-texto"><strong>Familia y comunidad</strong><small>Escuela de padres y una comunidad unida en torno al aprendizaje.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-meta"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-brain"></i></span>
             <span class="valor-texto"><strong>Pensamiento crítico</strong><small>Estudiantes que aprenden a razonar, preguntar y decidir.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-brote"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-seedling"></i></span>
             <span class="valor-texto"><strong>Servicio al prójimo</strong><small>Jóvenes comprometidos con su comunidad y con el mundo.</small></span>
           </li>
         </ul>
         <ul class="valores-grupo" aria-hidden="true">
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-medalla"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-graduation-cap"></i></span>
             <span class="valor-texto"><strong>Excelencia académica</strong><small>Programas sólidos que desarrollan el pensamiento y el conocimiento.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-corazon"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-heart"></i></span>
             <span class="valor-texto"><strong>Amor y fe</strong><small>Una educación con valores cristianos que forma el corazón.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-actividad"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-basketball"></i></span>
             <span class="valor-texto"><strong>Deporte y salud</strong><small>Torneos internos, educación física y hábitos de vida sana.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-paleta"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-palette"></i></span>
             <span class="valor-texto"><strong>Arte y cultura</strong><small>Música, danza y talleres para descubrir el talento de cada alumno.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-cruz"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-hands-praying"></i></span>
             <span class="valor-texto"><strong>Cuidado pastoral</strong><small>Acompañamiento espiritual y orientación personal constante.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-casa"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-users"></i></span>
             <span class="valor-texto"><strong>Familia y comunidad</strong><small>Escuela de padres y una comunidad unida en torno al aprendizaje.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-meta"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-brain"></i></span>
             <span class="valor-texto"><strong>Pensamiento crítico</strong><small>Estudiantes que aprenden a razonar, preguntar y decidir.</small></span>
           </li>
           <li class="valor">
-            <span class="valor-icono"><svg class="icono-svg"><use href="#i-brote"/></svg></span>
+            <span class="valor-icono"><i class="fa-solid fa-seedling"></i></span>
             <span class="valor-texto"><strong>Servicio al prójimo</strong><small>Jóvenes comprometidos con su comunidad y con el mundo.</small></span>
           </li>
         </ul>
@@ -436,17 +406,17 @@
 
       <div class="contacto-grid" data-animar style="--a:1">
         <div class="contacto-item">
-          <span class="icono"><svg class="icono-svg"><use href="#i-pin"/></svg></span>
+          <span class="icono"><i class="fa-solid fa-location-dot"></i></span>
           <h3>Dirección</h3>
           <p>Pasaje Los Gaviones Mz. 109b Lte 2</p>
         </div>
         <div class="contacto-item">
-          <span class="icono"><svg class="icono-svg"><use href="#i-telefono"/></svg></span>
+          <span class="icono"><i class="fa-solid fa-phone"></i></span>
           <h3>Teléfono</h3>
           <p><a href="tel:945454081" class="tel-enlace">945 454 081</a></p>
         </div>
         <div class="contacto-item">
-          <span class="icono"><svg class="icono-svg"><use href="#i-correo"/></svg></span>
+          <span class="icono"><i class="fa-solid fa-envelope"></i></span>
           <h3>Correo</h3>
           <p>contacto@mibuenpastor.edu</p>
         </div>

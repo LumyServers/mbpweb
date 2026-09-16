@@ -54,12 +54,6 @@ a {
   text-decoration: none;
 }
 
-.icono-svg {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
 /* ---------- Barra superior ---------- */
 .topbar {
   background: var(--azul);
@@ -232,10 +226,8 @@ a {
   color: var(--negro);
 }
 
-.icono-nav .icono-svg {
-  width: 20px;
-  height: 20px;
-  margin: auto;
+.icono-nav i {
+  font-size: 18px;
 }
 
 .icono-nav:hover {
@@ -487,49 +479,6 @@ section {
   border-radius: 4px;
 }
 
-.tarjeta {
-  flex: 0 0 290px;
-  scroll-snap-align: start;
-  background: var(--blanco);
-  border: 1px solid var(--gris-borde);
-  border-radius: 8px;
-  padding: 30px 24px;
-  text-align: left;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.tarjeta:hover {
-  box-shadow: 0 14px 32px var(--sombra-fuerte);
-  transform: translateY(-4px);
-}
-
-.tarjeta-icono {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--gris-claro);
-  margin-bottom: 14px;
-}
-
-.tarjeta-icono .icono-svg {
-  width: 26px;
-  height: 26px;
-}
-
-.tarjeta h3 {
-  font-size: 17px;
-  color: var(--negro);
-  margin-bottom: 8px;
-}
-
-.tarjeta p {
-  font-size: 14px;
-  color: var(--gris-texto);
-}
-
 /* ---------- Franja de valores deslizante ---------- */
 .valores {
   position: relative;
@@ -606,9 +555,8 @@ section {
   flex: 0 0 62px;
 }
 
-.valor-icono .icono-svg {
-  width: 27px;
-  height: 27px;
+.valor-icono i {
+  font-size: 24px;
   color: var(--azul);
 }
 
@@ -945,10 +893,9 @@ section {
   margin-bottom: 6px;
 }
 
-.icono .icono-svg {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
+.icono i {
+  font-size: 26px;
+  color: var(--azul);
 }
 
 .contacto-item h3 {
