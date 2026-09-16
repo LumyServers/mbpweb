@@ -684,6 +684,8 @@ section {
   box-shadow: none;
   object-fit: cover;
   object-position: center 30%;
+  transform: scale(1.15);
+  transform-origin: center;
 }
 
 .directora-cita {
