@@ -34,8 +34,11 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   `cubic-bezier(0.22, 1, 0.36, 1)` y retraso escalonado vía `--a`.
 - Portada con foto y superposición azul, cinta de cifras, bienvenida,
   franja de valores con desplazamiento suave (iconos Font Awesome, se pausa
-  al pasar el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), directora,
-  noticias, banner "Pide información" y pie de página.
+  al pasar el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), palabras
+  de la directora, noticias, banner "Pide información" y pie de página.
+- La sección "El colegio" fusiona bienvenida y directora: dos párrafos de
+  bienvenida (sin foto lateral, se quitó galeria-1.jpg) seguidos del bloque
+  `#directora` con la foto de la directora a la izquierda y sus palabras.
 - El home se mantiene minimalista: el proceso de admisión (4 pasos) y los
   testimonios se quitaron del home y viven en sus propias páginas/secciones
   (admision.html y secciones futuras del megamenú). Todos los enlaces que
