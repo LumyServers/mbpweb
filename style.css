@@ -1,15 +1,15 @@
 :root {
-  --lima: #cdd500;
-  --lima-oscuro: #b3bb00;
-  --verde: #216e4e;
-  --verde-oscuro: #145036;
+  --azul: #1e5aa8;
+  --azul-oscuro: #123f78;
+  --azul-vivo: #2f7fd4;
+  --azul-vivo-oscuro: #1f66b4;
   --rojo: #ae2a19;
   --negro: #212529;
   --gris-oscuro: #393939;
   --blanco: #ffffff;
-  --gris-claro: #f7f8f6;
-  --gris-borde: #e6e6e6;
-  --gris-texto: #6b7280;
+  --gris-claro: #f2f6fb;
+  --gris-borde: #e2e9f2;
+  --gris-texto: #64748b;
   --sombra: rgba(0, 0, 0, 0.05);
   --sombra-fuerte: rgba(0, 0, 0, 0.1);
 }
@@ -55,7 +55,7 @@ a {
 
 /* ---------- Barra superior ---------- */
 .topbar {
-  background: var(--verde);
+  background: var(--azul);
   color: var(--blanco);
   font-size: 13px;
 }
@@ -73,7 +73,7 @@ a {
 }
 
 .topbar-portal {
-  color: var(--lima);
+  color: var(--azul-vivo);
   font-weight: 700;
 }
 
@@ -107,7 +107,7 @@ a {
 }
 
 .marca-nombre strong {
-  color: var(--verde);
+  color: var(--azul);
   font-family: "Archivo", sans-serif;
   font-size: 19px;
 }
@@ -138,17 +138,17 @@ a {
 
 .menu a:hover:not(.matricula) {
   background: #f1f1ee;
-  color: var(--verde);
+  color: var(--azul);
 }
 
 .matricula {
-  background: var(--lima);
+  background: var(--azul-vivo);
   color: var(--negro);
   font-weight: 700;
 }
 
 .matricula:hover {
-  background: var(--lima-oscuro);
+  background: var(--azul-vivo-oscuro);
 }
 
 .menu-boton {
@@ -183,7 +183,7 @@ a {
 .hero-fondo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0.55) 100%);
+  background: linear-gradient(180deg, rgba(18, 63, 120, 0.78) 0%, rgba(18, 63, 120, 0.45) 60%, rgba(18, 63, 120, 0.7) 100%);
 }
 
 .hero-contenido {
@@ -197,7 +197,7 @@ a {
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: var(--lima);
+  color: var(--azul-vivo);
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -227,7 +227,7 @@ a {
 }
 
 .btn-primario {
-  background: var(--lima);
+  background: var(--azul-vivo);
   color: var(--negro);
   font-weight: 700;
   padding: 14px 32px;
@@ -237,7 +237,7 @@ a {
 }
 
 .btn-primario:hover {
-  background: var(--lima-oscuro);
+  background: var(--azul-vivo-oscuro);
 }
 
 .btn-secundario {
@@ -276,7 +276,7 @@ a {
 .cinta-item h3 {
   font-size: 40px;
   font-weight: 800;
-  color: var(--verde);
+  color: var(--azul);
 }
 
 .cinta-item p {
@@ -309,7 +309,7 @@ section {
   display: block;
   width: 64px;
   height: 4px;
-  background: var(--lima);
+  background: var(--azul-vivo);
   margin: 18px auto;
   border-radius: 2px;
 }
@@ -421,7 +421,7 @@ section {
 
 .etapa-edad {
   font-size: 12px;
-  color: var(--verde);
+  color: var(--azul);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -435,13 +435,13 @@ section {
 }
 
 .enlace {
-  color: var(--verde);
+  color: var(--azul);
   font-weight: 700;
   font-size: 14px;
 }
 
 .enlace:hover {
-  color: var(--lima-oscuro);
+  color: var(--azul-vivo-oscuro);
 }
 
 /* ---------- Directora ---------- */
@@ -473,7 +473,7 @@ section {
 
 .directora-firma {
   font-weight: 800;
-  color: var(--verde);
+  color: var(--azul);
   font-size: 17px;
 }
 
@@ -504,7 +504,7 @@ section {
   display: inline-block;
   font-size: 28px;
   font-weight: 800;
-  color: var(--lima-oscuro);
+  color: var(--azul-vivo-oscuro);
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -577,7 +577,7 @@ section {
 
 /* ---------- Llamado a la acción ---------- */
 .cta {
-  background: var(--lima);
+  background: var(--azul-vivo);
 }
 
 .cta-inner {
@@ -645,17 +645,17 @@ section {
 }
 
 .tel-enlace {
-  color: var(--verde);
+  color: var(--azul);
   font-weight: 700;
 }
 
 .tel-enlace:hover {
-  color: var(--lima-oscuro);
+  color: var(--azul-vivo-oscuro);
 }
 
 /* ---------- Pie de página ---------- */
 .footer {
-  background: var(--verde-oscuro);
+  background: var(--azul-oscuro);
   color: #dbe6e0;
 }
 
@@ -673,13 +673,13 @@ section {
 }
 
 .footer-nombre strong {
-  color: var(--lima);
+  color: var(--azul-vivo);
   font-family: "Archivo", sans-serif;
 }
 
 .footer-lema {
   font-size: 11px;
-  color: var(--lima);
+  color: var(--azul-vivo);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 4px;
@@ -701,7 +701,7 @@ section {
 }
 
 .footer-col a:hover {
-  color: var(--lima);
+  color: var(--azul-vivo);
 }
 
 .footer-col p {
