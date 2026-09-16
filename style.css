@@ -1389,6 +1389,30 @@ html.js .grid-animada.visible > * {
   margin-bottom: 14px;
 }
 
+.btn-proceso {
+  display: inline-block;
+  margin-top: 22px;
+  background: var(--marino);
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  letter-spacing: 0.4px;
+  box-shadow: 0 10px 24px rgba(14, 77, 100, 0.22);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-proceso:hover {
+  background: var(--marino-vivo);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(14, 77, 100, 0.3);
+}
+
+.btn-proceso.atencion::after {
+  box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.5);
+}
+
 .pagina-fila-imagen img {
   border-radius: 8px;
   box-shadow: 0 20px 40px var(--sombra-fuerte);
@@ -1711,14 +1735,9 @@ html.js .grid-animada.visible > * {
 }
 
 .confirmacion {
-  max-width: 560px;
-  margin: 0 auto;
   text-align: center;
   background: var(--blanco);
-  border: 1px solid var(--borde);
-  border-radius: 12px;
-  padding: 48px 32px;
-  box-shadow: 0 14px 32px var(--sombra);
+  padding: 56px 32px;
 }
 
 .confirmacion i {

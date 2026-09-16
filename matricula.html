@@ -43,7 +43,7 @@
 
   <!-- Portada de la página -->
   <section class="pagina-hero foto">
-    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80" alt="" class="pagina-hero-imagen" aria-hidden="true">
+    <img src="fotos/galeria/hero-4.jpg" alt="" class="pagina-hero-imagen" aria-hidden="true">
     <div class="pagina-hero-fondo" aria-hidden="true"></div>
     <div class="container">
       <p class="miga"><a href="index.html">Inicio</a> / Matrícula 2026</p>
@@ -57,59 +57,64 @@
     <div class="container">
       <div class="inscripcion-columnas">
         <div class="formulario-marco zoom" data-animar style="--a:1">
-          <form id="formInscripcion" class="formulario-propio" action="https://docs.google.com/forms/d/e/1FAIpQLSf4NC-PD-sd6vlfqjxJvUgdCWzDvIlb6jAky0NIlcW98xB7Vw/formResponse" method="POST" target="oculto-form">
-            <input type="hidden" name="fvv" value="1">
-            <input type="hidden" name="partialResponse" value="[null,null,&quot;323859821535648179&quot;]">
-            <input type="hidden" name="pageHistory" value="0">
-            <input type="hidden" name="fbzx" value="323859821535648179">
-            <input type="hidden" name="submissionTimestamp" value="-1">
+<form id="formInscripcion" class="formulario-propio" action="https://formsubmit.co/i.e.pmibuenpastor@gmail.com" method="POST" data-ajax="true">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="Nueva solicitud de matrícula - I.E.P MI BUEN PASTOR">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
 
-            <div class="campos">
+          <div class="campos">
             <div class="campo">
               <label for="nombreEstudiante">Nombre del estudiante</label>
-              <input type="text" id="nombreEstudiante" name="entry.1058944864" required>
+              <input type="text" id="nombreEstudiante" name="nombre_estudiante" required>
             </div>
 
             <div class="campo">
               <label for="fechaNacimiento">Fecha de nacimiento</label>
-              <input type="date" id="fechaNacimiento" name="entry.357975720" required>
+              <input type="date" id="fechaNacimiento" name="fecha_nacimiento" required>
             </div>
 
             <fieldset class="campo">
               <legend>Nivel que desea</legend>
               <div class="opciones">
-                <label class="opcion"><input type="radio" name="entry.1797803874" value="Cuna" required> Cuna</label>
-                <label class="opcion"><input type="radio" name="entry.1797803874" value="Inicial" required> Inicial</label>
-                <label class="opcion"><input type="radio" name="entry.1797803874" value="Primaria" required> Primaria</label>
-                <label class="opcion"><input type="radio" name="entry.1797803874" value="Secundaria" required> Secundaria</label>
+                <label class="opcion"><input type="radio" name="nivel" value="Cuna" required> Cuna</label>
+                <label class="opcion"><input type="radio" name="nivel" value="Inicial" required> Inicial</label>
+                <label class="opcion"><input type="radio" name="nivel" value="Primaria" required> Primaria</label>
+                <label class="opcion"><input type="radio" name="nivel" value="Secundaria" required> Secundaria</label>
               </div>
-              <input type="hidden" name="entry.1797803874_sentinel">
             </fieldset>
 
             <div class="campo">
               <label for="grado">Grado</label>
-              <input type="text" id="grado" name="entry.1256664158" required>
+              <input type="text" id="grado" name="grado" required>
             </div>
 
             <div class="campo">
               <label for="nombrePadre">Nombre del padre/madre</label>
-              <input type="text" id="nombrePadre" name="entry.75751632" required>
+              <input type="text" id="nombrePadre" name="nombre_padre" required>
             </div>
 
             <div class="campo">
               <label for="celular">Celular</label>
-              <input type="tel" id="celular" name="entry.2035175204" required>
+              <input type="tel" id="celular" name="celular" required>
             </div>
 
             <div class="campo campo-ancho">
               <label for="comentarios">¿Preguntas o comentarios?</label>
-              <textarea id="comentarios" name="entry.622453008" rows="3"></textarea>
+              <textarea id="comentarios" name="comentarios" rows="3"></textarea>
             </div>
           </div>
 
           <button type="submit" class="btn-enviar">Enviar inscripción</button>
-          <p class="nota-form">Al enviar, nuestros representantes te contactarán por WhatsApp.</p>
+          <p class="nota-form">Al enviar, un miembro del colegio se comunicará contigo.</p>
         </form>
+
+        <div id="confirmacion" class="confirmacion" hidden>
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          <h3>¡Solicitud enviada!</h3>
+          <p>Gracias por confiar en nosotros. Uno de nuestros representantes se comunicará contigo muy pronto por WhatsApp.</p>
+          <a href="index.html" class="btn-cta">Volver al inicio</a>
+        </div>
       </div>
 
         <aside class="inscripcion-info">
@@ -129,14 +134,6 @@
           </div>
         </aside>
       </div>
-
-      <div id="confirmacion" class="confirmacion" hidden>
-        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        <h3>¡Solicitud enviada!</h3>
-        <p>Gracias por confiar en nosotros. Uno de nuestros representantes se comunicará contigo muy pronto por WhatsApp.</p>
-        <a href="index.html" class="btn-cta">Volver al inicio</a>
-      </div>
-      <iframe name="oculto-form" class="oculto-form" title="Formulario" hidden></iframe>
     </div>
   </section>
 
@@ -221,12 +218,15 @@
 
     const form = document.getElementById("formInscripcion");
     const confirmacion = document.getElementById("confirmacion");
-    form.addEventListener("submit", () => {
-      setTimeout(() => {
+    window.formSubmit = {
+      success: () => {
         form.hidden = true;
         confirmacion.hidden = false;
-      }, 300);
-    });
+      },
+      error: () => {
+        console.error("Error al enviar la solicitud: por favor intenta nuevamente.");
+      }
+    };
   </script>
 </body>
 </html>

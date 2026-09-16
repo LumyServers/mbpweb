@@ -53,7 +53,11 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
     `--sombra-fuerte`. Fuentes: Inter (texto) y Space Grotesk (títulos).
 - Datos reales: dirección "Pasaje Los Gaviones Mz. 109b Lte 2", teléfono 945 454 081,
   12 años de trayectoria (desde 2014, calculado a 2026), 7 docentes, 3 niveles + cuna, directora Celia Jeannete
-  Valerio Avila, colegio de Atalaya (Perú). Correo `contacto@mibuenpastor.edu` es provisional.
+  Valerio Avila, colegio de Atalaya (Perú). Correo de contacto oficial Gmail `i.e.pmibuenpastor@gmail.com`
+  (destino de las inscripciones vía FormSubmit).
+- Inscripciones externas: `matricula.html` usa FormSubmit.co (gratis, sin backend) hacia
+  `i.e.pmibuenpastor@gmail.com`; la primera vez se activa con un correo de confirmación
+  (revisar Spam) y luego cada solicitud llega como correo con tabla de datos.
 - Iconos: Font Awesome 6.5.2 vía CDN (iconos sólidos, no trazar finos). No copiar
   iconos/fuentes de stgeorges.edu.pe (copyright).
 - Páginas por etapa: cada nivel tiene su propia página (`cuna.html`,
