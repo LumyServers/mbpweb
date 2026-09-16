@@ -37,7 +37,8 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   al pasar el cursor), niveles educativos (Cuna/Inicial/Primaria/Secundaria),
   palabras de la directora, noticias, banner "Pide información" y pie de página.
   La sección de niveles se llama "NIVELES EDUCATIVOS" (sin subtítulo ni intro;
-  solo título + tarjetas).
+  solo título + tarjetas). La sección de noticias se llama "NOTICIAS Y EVENTOS"
+  (en mayúsculas, sin subtítulo; solo título + tarjetas).
 - La sección "El colegio" fusiona bienvenida y directora: dos párrafos de
   bienvenida (sin foto lateral, se quitó galeria-1.jpg) seguidos del bloque
   `#directora` con la foto de la directora a la izquierda y sus palabras.
