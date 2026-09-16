@@ -1568,3 +1568,63 @@ html.js .grid-animada.visible > * {
     animation: none;
   }
 }
+/* ---------- Tipografía ampliada en pantallas grandes ---------- */
+@media (min-width: 1440px) {
+  body {
+    font-size: 17px;
+  }
+
+  .hero h1 {
+    font-size: 66px;
+  }
+
+  .hero-frase {
+    font-size: 16px;
+  }
+
+  .hero-desc,
+  .lead,
+  .intro-etapas,
+  .pagina-fila-texto .lead {
+    font-size: 19px;
+  }
+
+  .titulo-seccion {
+    font-size: 46px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .directora-cita {
+    font-size: 30px;
+  }
+
+  .contador {
+    font-size: 68px;
+  }
+
+  .noticia-cuerpo h3,
+  .paso h3 {
+    font-size: 19px;
+  }
+
+  .noticia-cuerpo p,
+  .paso p,
+  .etapa-info p:not(.etapa-edad) {
+    font-size: 16px;
+  }
+
+  .cta-texto h2 {
+    font-size: 52px;
+  }
+
+  .pagina-hero h1 {
+    font-size: 56px;
+  }
+
+  .pagina-fila-texto .lead {
+    font-size: 18px;
+  }
+}
