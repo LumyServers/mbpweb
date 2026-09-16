@@ -442,10 +442,13 @@ section {
 /* ---------- Bienvenida ---------- */
 .bienvenida {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 44px;
-  align-items: center;
-  max-width: 1240px;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.bienvenida-texto {
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -461,7 +464,7 @@ section {
 
 .galeria {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 7;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 20px 40px var(--sombra-fuerte);
@@ -507,29 +510,6 @@ section {
 .punto.activa {
   background: var(--azul);
   transform: scale(1.25);
-}
-
-.bienvenida-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 8px 24px var(--sombra-fuerte);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--azul);
-  white-space: nowrap;
-}
-
-.bienvenida-badge i {
-  color: var(--rojo);
 }
 
 /* ---------- Carrusel horizontal ---------- */
@@ -1033,6 +1013,10 @@ section {
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 900px) {
+  .galeria {
+    aspect-ratio: 16 / 10;
+  }
+
   .nav {
     flex-wrap: wrap;
   }
@@ -1121,6 +1105,10 @@ section {
 }
 
 @media (max-width: 520px) {
+  .galeria {
+    aspect-ratio: 4 / 3;
+  }
+
   .pasos,
   .etapas-grid {
     grid-template-columns: 1fr;
