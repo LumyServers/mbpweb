@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I.E.P Mi Buen Pastor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>I.E.P Mi Buen Pastor</h1>
-      <p class="tagline">Educando con amor y fe</p>
-      <nav>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="marca">
+        <span class="marca-nombre">I.E.P <strong>Mi Buen Pastor</strong></span>
+        <span class="marca-lema">Educando con amor y fe</span>
+      </div>
+      <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#publicaciones">Publicaciones</a>
         <a href="#galeria">Galería</a>
@@ -20,56 +26,97 @@
     </div>
   </header>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="container">
-        <h2>Bienvenidos a nuestra institución</h2>
-        <p>Lugar donde tus hijos crecen en conocimiento, valores y fe.</p>
-      </div>
-    </section>
+  <section id="inicio" class="hero">
+    <div class="hero-fondo"></div>
+    <div class="container hero-contenido">
+      <h1>I.E.P Mi Buen Pastor</h1>
+      <p class="hero-sub">Formando vidas con valores, conocimiento y fe</p>
+      <p class="hero-desc">
+        Bienvenidos a nuestra institución. Aquí cada estudiante encuentra un lugar
+        para crecer, aprender y construir su futuro.
+      </p>
+      <a href="#publicaciones" class="btn-dorado">Conoce más</a>
+    </div>
+  </section>
 
+  <section class="cinta">
+    <div class="container cinta-grid">
+      <div class="cinta-item">
+        <h3>+500</h3>
+        <p>Estudiantes</p>
+      </div>
+      <div class="cinta-item">
+        <h3>25</h3>
+        <p>Años de trayectoria</p>
+      </div>
+      <div class="cinta-item">
+        <h3>+40</h3>
+        <p>Docentes calificados</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
     <section id="publicaciones">
       <div class="container">
-        <h2>Últimas publicaciones</h2>
+        <h2 class="titulo-seccion">Últimas publicaciones</h2>
         <article class="tarjeta">
-          <h3>Inicio del año escolar</h3>
-          <p class="fecha">Publicado: 15 de septiembre de 2026</p>
-          <p>Damos la bienvenida a todos nuestros estudiantes para un nuevo año de aprendizajes.</p>
+          <span class="badge-fecha">15 de septiembre de 2026</span>
+          <h3>Inicio del año escolar 2026</h3>
+          <p>Damos la bienvenida a todos nuestros estudiantes para un nuevo año de aprendizaje, compañerismo y crecimiento personal.</p>
         </article>
         <article class="tarjeta">
-          <h3>Día del padre</h3>
-          <p class="fecha">Publicado: 14 de septiembre de 2026</p>
-          <p>Celebramos a los papás con una actividad especial en el patio del colegio.</p>
+          <span class="badge-fecha">14 de septiembre de 2026</span>
+          <h3>Celebración del Día del Padre</h3>
+          <p>Con mucha alegría celebramos a todos los papás con actividades y presentaciones preparadas por nuestros estudiantes.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="badge-fecha">10 de septiembre de 2026</span>
+          <h3>Campeonato deportivo interno</h3>
+          <p>Arrancó nuestra competencia deportiva entre grados. ¡Vengan a apoyar a sus equipos favoritos!</p>
         </article>
       </div>
     </section>
 
-    <section id="galeria">
+    <section id="galeria" class="seccion-gris">
       <div class="container">
-        <h2>Galería de fotos</h2>
-        <p class="aviso">Aquí podrás ver las fotos de nuestros eventos y actividades.</p>
-        <div class="fotos">
-          <div class="foto">Foto 1</div>
-          <div class="foto">Foto 2</div>
-          <div class="foto">Foto 3</div>
+        <h2 class="titulo-seccion">Galería de fotos</h2>
+        <p class="subtitulo">Momentos de nuestra vida escolar.</p>
+        <div class="galeria">
+          <div class="foto foto-grande">Nuestras aulas</div>
+          <div class="foto">Eventos</div>
+          <div class="foto">Deportes</div>
+          <div class="foto">Actividades</div>
         </div>
       </div>
     </section>
 
     <section id="contacto">
       <div class="container">
-        <h2>Contacto</h2>
-        <p>Dirección del colegio</p>
-        <p>Teléfono: (000) 000-0000</p>
-        <p>Correo: contacto@mibuenpastor.edu</p>
+        <h2 class="titulo-seccion">Contacto</h2>
+        <div class="contacto-grid">
+          <div class="contacto-item">
+            <span class="icono">📍</span>
+            <p>Dirección del colegio</p>
+          </div>
+          <div class="contacto-item">
+            <span class="icono">📞</span>
+            <p>(000) 000-0000</p>
+          </div>
+          <div class="contacto-item">
+            <span class="icono">✉️</span>
+            <p>contacto@mibuenpastor.edu</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
       <p>© 2026 I.E.P Mi Buen Pastor. Todos los derechos reservados.</p>
     </div>
   </footer>
+
 </body>
 </html>
