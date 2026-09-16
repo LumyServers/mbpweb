@@ -448,6 +448,18 @@
     boton.addEventListener("click", () => {
       menu.classList.toggle("abierto");
     });
+    const heroImagen = document.querySelector(".hero-imagen");
+    if (heroImagen && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let ocupado = false;
+      window.addEventListener("scroll", () => {
+        if (ocupado) return;
+        ocupado = true;
+        requestAnimationFrame(() => {
+          heroImagen.style.transform = "scale(1.08) translateY(" + window.scrollY * 0.22 + "px)";
+          ocupado = false;
+        });
+      }, { passive: true });
+    }
     const atenciones = document.querySelectorAll(".atencion");
     atenciones.forEach((cta) => {
       cta.addEventListener("click", () => cta.classList.add("toggled"));
