@@ -467,18 +467,35 @@ section {
 
 /* Palabras de la directora dentro de la bienvenida */
 .palabras-directora {
-  margin-top: 32px;
-  padding-top: 28px;
-  border-top: 1px solid var(--borde);
+  position: relative;
+  margin-top: 36px;
+  padding: 34px 32px 30px;
+  background: var(--blanco);
+  border: 2px solid var(--espuma);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px var(--sombra);
+}
+
+.palabras-directora::before {
+  content: "\201C";
+  position: absolute;
+  top: -24px;
+  left: 28px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 76px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--aguamarina);
 }
 
 .palabras-directora .directora-cita {
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
-  line-height: inherit;
-  color: #4F6875;
-  margin-bottom: 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--tinta);
+  margin-bottom: 18px;
 }
 
 .palabras-directora .directora-firma {
