@@ -1,17 +1,18 @@
 :root {
-  --azul: #1e5aa8;
-  --azul-oscuro: #123f78;
-  --azul-vivo: #2f7fd4;
-  --azul-vivo-oscuro: #1f66b4;
-  --rojo: #ae2a19;
-  --negro: #212529;
+  --azul: #1c3057;
+  --azul-oscuro: #001a4d;
+  --azul-vivo: #c03227;
+  --azul-vivo-oscuro: #a0281f;
+  --cielo: #a4cbcc;
+  --rojo: #c03227;
+  --negro: #1c3057;
   --gris-oscuro: #393939;
   --blanco: #ffffff;
-  --gris-claro: #f2f6fb;
-  --gris-borde: #e2e9f2;
-  --gris-texto: #64748b;
-  --sombra: rgba(0, 0, 0, 0.05);
-  --sombra-fuerte: rgba(0, 0, 0, 0.1);
+  --gris-claro: #e6eeff;
+  --gris-borde: #d6e0f2;
+  --gris-texto: #4a5568;
+  --sombra: rgba(28, 48, 87, 0.08);
+  --sombra-fuerte: rgba(28, 48, 87, 0.16);
 }
 
 * {
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   line-height: 1.7;
   color: var(--negro);
   background: var(--blanco);
@@ -34,7 +35,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Archivo", "Raleway", sans-serif;
+  font-family: "Space Grotesk", "Inter", sans-serif;
   font-weight: 700;
 }
 
@@ -73,7 +74,7 @@ a {
 }
 
 .topbar-portal {
-  color: var(--azul-vivo);
+  color: var(--cielo);
   font-weight: 700;
 }
 
@@ -108,7 +109,7 @@ a {
 
 .marca-nombre strong {
   color: var(--azul);
-  font-family: "Archivo", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 19px;
 }
 
@@ -256,7 +257,7 @@ a {
 .hero-fondo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(18, 63, 120, 0.78) 0%, rgba(18, 63, 120, 0.45) 60%, rgba(18, 63, 120, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(28, 48, 87, 0.8) 0%, rgba(0, 26, 77, 0.5) 60%, rgba(0, 26, 77, 0.72) 100%);
 }
 
 .hero-contenido {
@@ -267,10 +268,10 @@ a {
 }
 
 .hero-frase {
-  font-family: "Archivo", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: var(--azul-vivo);
+  color: var(--cielo);
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -301,12 +302,17 @@ a {
 
 .btn-primario {
   background: var(--azul-vivo);
-  color: var(--negro);
+  color: var(--blanco);
   font-weight: 700;
   padding: 14px 32px;
   border-radius: 8px;
   letter-spacing: 0.5px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primario:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .btn-primario:hover {
@@ -538,7 +544,7 @@ section {
 .directora-cita {
   font-size: 26px;
   font-weight: 700;
-  font-family: "Archivo", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   line-height: 1.45;
   color: var(--negro);
   margin-bottom: 18px;
@@ -561,7 +567,7 @@ section {
 /* ---------- Pasos de admisión ---------- */
 .pasos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 22px;
 }
 
@@ -650,7 +656,7 @@ section {
 
 /* ---------- Llamado a la acción ---------- */
 .cta {
-  background: var(--azul-vivo);
+  background: var(--azul);
 }
 
 .cta-inner {
@@ -664,13 +670,12 @@ section {
 .cta-texto h2 {
   font-size: 32px;
   font-weight: 800;
-  color: var(--negro);
+  color: var(--blanco);
 }
 
 .cta-texto p {
-  color: var(--negro);
-  opacity: 0.75;
-  font-weight: 600;
+  color: var(--cielo);
+  font-weight: 500;
 }
 
 .btn-cta {
@@ -747,12 +752,12 @@ section {
 
 .footer-nombre strong {
   color: var(--azul-vivo);
-  font-family: "Archivo", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .footer-lema {
   font-size: 11px;
-  color: var(--azul-vivo);
+  color: var(--cielo);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 4px;
