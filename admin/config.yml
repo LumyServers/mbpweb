@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Crear noticia {{slug}}"
+    update: "Actualizar noticia {{slug}}"
+    delete: "Eliminar noticia {{slug}}"
+    uploadMedia: "Subir imagen {{path}}"
+
+publish_mode: simple
+
+media_folder: "fotos/noticias"
+public_folder: "/fotos/noticias"
+
+collections:
+  - name: noticias
+    label: Noticias
+    label_singular: Noticia
+    files:
+      - label: Noticias y eventos
+        name: noticias
+        file: "noticias.json"
+        editor:
+          preview: false
+        fields:
+          - label: Noticias
+            name: noticias
+            widget: list
+            summary: "{{fields.titulo}} · {{fields.fecha}}"
+            id_field: titulo
+            fields:
+              - label: Título
+                name: titulo
+                widget: string
+              - label: Fecha de publicación
+                name: fecha
+                widget: datetime
+                format: "YYYY-MM-DD"
+              - label: Imagen
+                name: imagen
+                widget: image
+                required: false
+              - label: Resumen (texto que se ve en la tarjeta)
+                name: resumen
+                widget: text

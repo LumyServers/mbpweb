@@ -275,35 +275,7 @@
     <div class="container">
       <h2 class="titulo-seccion" data-animar>NOTICIAS Y EVENTOS</h2>
 
-      <div class="noticias-grid grid-animada" data-animar style="--a:1">
-        <article class="noticia">
-          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80" alt="Inicio del año escolar" class="noticia-imagen">
-          <div class="noticia-cuerpo">
-            <time class="fecha">15 de septiembre de 2026</time>
-            <h3>Inicio del año escolar 2026</h3>
-            <p>Damos la bienvenida a todos los estudiantes para un nuevo año de aprendizajes.</p>
-            <a href="#" class="enlace">Leer más →</a>
-          </div>
-        </article>
-        <article class="noticia">
-          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Día del padre" class="noticia-imagen">
-          <div class="noticia-cuerpo">
-            <time class="fecha">14 de septiembre de 2026</time>
-            <h3>Día del padre</h3>
-            <p>Celebramos a los papás con presentaciones de nuestros estudiantes.</p>
-            <a href="#" class="enlace">Leer más →</a>
-          </div>
-        </article>
-        <article class="noticia">
-          <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80" alt="Campeonato deportivo" class="noticia-imagen">
-          <div class="noticia-cuerpo">
-            <time class="fecha">10 de septiembre de 2026</time>
-            <h3>Campeonato deportivo interno</h3>
-            <p>Arrancó la competencia deportiva entre grados. ¡Vengan a apoyar!</p>
-            <a href="#" class="enlace">Leer más →</a>
-          </div>
-        </article>
-      </div>
+      <div class="noticias-grid grid-animada" data-animar style="--a:1" id="noticiasGrid"></div>
     </div>
   </section>
 
@@ -443,6 +415,56 @@
       });
     }, { threshold: 0.15 });
     animables.forEach((el) => observador.observe(el));
+    const noticiasGrid = document.getElementById("noticiasGrid");
+    if (noticiasGrid) {
+      const noticiasPorDefecto = [
+        { titulo: "Inicio del año escolar 2026", fecha: "2026-09-15", imagen: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80", resumen: "Damos la bienvenida a todos los estudiantes para un nuevo año de aprendizajes." },
+        { titulo: "Día del padre", fecha: "2026-09-14", imagen: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80", resumen: "Celebramos a los papás con presentaciones de nuestros estudiantes." },
+        { titulo: "Campeonato deportivo interno", fecha: "2026-09-10", imagen: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80", resumen: "Arrancó la competencia deportiva entre grados. ¡Vengan a apoyar!" }
+      ];
+      const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+      const fechaLegible = (iso) => {
+        const partes = String(iso || "").slice(0, 10).split("-");
+        if (partes.length !== 3) return "";
+        return Number(partes[2]) + " de " + meses[Number(partes[1]) - 1] + " de " + partes[0];
+      };
+      const dibujarNoticias = (lista) => {
+        noticiasGrid.textContent = "";
+        lista.forEach((noticia, i) => {
+          const art = document.createElement("article");
+          art.className = "noticia";
+          art.style.animationDelay = (40 + i * 90) + "ms";
+          if (noticia.imagen) {
+            const img = document.createElement("img");
+            img.src = noticia.imagen;
+            img.alt = noticia.titulo || "";
+            img.className = "noticia-imagen";
+            img.loading = "lazy";
+            art.appendChild(img);
+          }
+          const cuerpo = document.createElement("div");
+          cuerpo.className = "noticia-cuerpo";
+          const fecha = document.createElement("time");
+          fecha.className = "fecha";
+          fecha.textContent = fechaLegible(noticia.fecha);
+          const titulo = document.createElement("h3");
+          titulo.textContent = noticia.titulo || "";
+          const resumen = document.createElement("p");
+          resumen.textContent = noticia.resumen || "";
+          const enlace = document.createElement("a");
+          enlace.className = "enlace";
+          enlace.href = "#";
+          enlace.textContent = "Leer más →";
+          cuerpo.append(fecha, titulo, resumen, enlace);
+          art.appendChild(cuerpo);
+          noticiasGrid.appendChild(art);
+        });
+      };
+      fetch("noticias.json", { cache: "no-store" })
+        .then((res) => (res.ok ? res.json() : Promise.reject()))
+        .then((datos) => dibujarNoticias(Array.isArray(datos.noticias) ? datos.noticias : noticiasPorDefecto))
+        .catch(() => dibujarNoticias(noticiasPorDefecto));
+    }
   </script>
 </body>
 </html>

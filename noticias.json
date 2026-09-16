@@ -1,0 +1,22 @@
+{
+  "noticias": [
+    {
+      "titulo": "Inicio del año escolar 2026",
+      "fecha": "2026-09-15",
+      "imagen": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
+      "resumen": "Damos la bienvenida a todos los estudiantes para un nuevo año de aprendizajes."
+    },
+    {
+      "titulo": "Día del padre",
+      "fecha": "2026-09-14",
+      "imagen": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+      "resumen": "Celebramos a los papás con presentaciones de nuestros estudiantes."
+    },
+    {
+      "titulo": "Campeonato deportivo interno",
+      "fecha": "2026-09-10",
+      "imagen": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80",
+      "resumen": "Arrancó la competencia deportiva entre grados. ¡Vengan a apoyar!"
+    }
+  ]
+}

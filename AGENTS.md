@@ -39,6 +39,27 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
   La sección de niveles se llama "NIVELES EDUCATIVOS" (sin subtítulo ni intro;
   solo título + tarjetas). La sección de noticias se llama "NOTICIAS Y EVENTOS"
   (en mayúsculas, sin subtítulo; solo título + tarjetas).
+- Noticias con panel CMS (Decap CMS, gratis y de código abierto):
+  - Las noticias ya no son HTML fijo: viven en `noticias.json` y `index.html`
+    las dibuja con un pequeño script (construye las tarjetas con las clases
+    `.noticia`, `.noticia-imagen`, `.noticia-cuerpo`, `.fecha`, `.enlace`;
+    usa `textContent`, respeta el retraso escalonado de la grilla y formatea
+    la fecha ISO a "día de mes de año" en español).
+  - Si el `fetch` de `noticias.json` falla (p. ej. página abierta por
+    `file://`), se muestran 3 noticias de respaldo embebidas en el JS.
+  - `admin/index.html` + `admin/config.yml` cargan el panel en
+    `http://sitio/admin`. Configuración: backend `git-gateway` rama `main`,
+    colección tipo *file* apuntando a `noticias.json` (lista de noticias con
+    título, fecha, imagen y resumen). `media_folder: fotos/noticias`,
+    `public_folder: /fotos/noticias` (las fotos subidas van a `fotos/noticias/`).
+  - Para publicar, la directora o un editor entra a `<sitio>/admin`, inicia
+    sesión (Netlify Identity), escribe/edita noticias y "Publica"; Decap hace
+    commit al repo y Netlify redespliega por sí solo (sin build: el sitio es
+    estático vanilla).
+  - Falta por hacer (pasos manuales del usuario): subir el repo a GitHub,
+    conectar Netlify al repo (hosting gratis), activar `Identity` + `Git
+    Gateway` y entonces se puede invitar editores por correo. El `fetch` de
+    `noticias.json` no funciona al abrir por `file://`, solo servido por HTTP.
 - La sección "El colegio" fusiona bienvenida y directora: dos párrafos de
   bienvenida (sin foto lateral, se quitó galeria-1.jpg) seguidos del bloque
   `#directora` con la foto de la directora a la izquierda y sus palabras.
