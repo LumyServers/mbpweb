@@ -455,9 +455,35 @@ section {
   color: #444;
 }
 
+.bienvenida-imagen {
+  position: relative;
+}
+
 .bienvenida-imagen img {
   border-radius: 8px;
   box-shadow: 0 20px 40px var(--sombra-fuerte);
+}
+
+.bienvenida-badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 24px var(--sombra-fuerte);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--azul);
+  white-space: nowrap;
+}
+
+.bienvenida-badge i {
+  color: var(--rojo);
 }
 
 /* ---------- Carrusel horizontal ---------- */
