@@ -369,63 +369,8 @@ a {
   padding: 6px 20px;
 }
 
-.cinta-figura {
-  order: -1;
-  flex: 0 0 190px;
-  align-self: center;
-  margin-right: 12px;
-}
-
-.pastorcito {
-  width: 100%;
-  height: auto;
-  animation: pastorcitoFlote 3.4s ease-in-out infinite;
-}
-
-.pastorcito-brazo {
-  transform-box: view-box;
-  transform-origin: 246px 100px;
-  animation: pastorcitoSaludo 1.6s ease-in-out infinite;
-}
-
-.cordero {
-  transform-box: fill-box;
-  transform-origin: center bottom;
-  animation: corderoRespiro 2.8s ease-in-out infinite;
-}
-
-@keyframes pastorcitoFlote {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes pastorcitoSaludo {
-  0%,
-  100% {
-    transform: rotate(14deg);
-  }
-  50% {
-    transform: rotate(-10deg);
-  }
-}
-
-@keyframes corderoRespiro {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03, 0.96);
-  }
-}
-
 .cinta-item h3 {
-  font-size: 40px;
+  font-size: 58px;
   font-weight: 800;
   color: var(--azul);
 }
@@ -1051,10 +996,6 @@ section {
     display: block;
   }
 
-  .cinta-figura {
-    display: none;
-  }
-
   .bienvenida,
   .noticias-grid,
   .pasos {
@@ -1280,12 +1221,6 @@ html.js .grid-animada.visible > * {
   .atencion::after {
     animation: none;
     opacity: 0.45;
-  }
-
-  .pastorcito,
-  .pastorcito-brazo,
-  .cordero {
-    animation: none;
   }
 
   .etapa:hover,
