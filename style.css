@@ -1238,32 +1238,6 @@ html.js .grid-animada.visible > * {
   text-align: center;
 }
 
-.pagina-hero.foto {
-  position: relative;
-  overflow: hidden;
-  padding: 110px 0;
-}
-
-.pagina-hero-imagen {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-}
-
-.pagina-hero-fondo {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 26, 77, 0.62), rgba(0, 26, 77, 0.42));
-}
-
-.pagina-hero.foto .container {
-  position: relative;
-  z-index: 1;
-}
-
 .pagina-hero .container {
   animation: aparecerArriba 1s ease-out 0.15s both;
 }
