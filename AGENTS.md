@@ -1,6 +1,6 @@
 # Proyecto MBPweb
 
-Sitio web para el colegio. Objetivos generales:
+Sitio web para el colegio **I.E.P Mi Buen Pastor**. Objetivos generales:
 
 - Página pública con fotos y publicaciones del colegio.
 - Sección de matrícula (inscripción de estudiantes).
@@ -8,7 +8,10 @@ Sitio web para el colegio. Objetivos generales:
 
 ## Estado actual
 
-Proyecto en fase inicial. Aún no se ha decidido la tecnología ni se ha creado código.
+Primera versión del sitio público creada:
+
+- `index.html`: página principal con inicio, publicaciones, galería y contacto.
+- `style.css`: estilos de la página.
 
 ## Reglas del proyecto
 
