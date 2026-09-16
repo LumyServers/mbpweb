@@ -679,6 +679,7 @@ section {
 }
 
 .etapa {
+  position: relative;
   background: var(--blanco);
   border-radius: 8px;
   overflow: hidden;
@@ -688,6 +689,12 @@ section {
 
 .etapa:hover {
   box-shadow: 0 14px 32px var(--sombra-fuerte);
+}
+
+.etapa .enlace::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .etapa-imagen {
