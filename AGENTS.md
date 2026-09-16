@@ -35,10 +35,11 @@ estructura de St. George's College (stgeorges.edu.pe) con contenido original:
 - Portada con foto y superposición azul, cinta de cifras, bienvenida,
   franja de valores con desplazamiento suave (iconos Font Awesome, se pausa
   al pasar el cursor), etapas (Cuna/Inicial/Primaria/Secundaria), directora,
-  proceso de admisión en 4 pasos (Contacto inicial, Inscripción, Matrícula,
-  ¡Bienvenidos!), noticias, testimonios "¿Qué nos diferencia?",
-  banner "Pide información" y pie de página (la sección Contacto fue
-  eliminada; los enlaces apuntan a #admision y los datos quedan en el pie).
+  noticias, banner "Pide información" y pie de página.
+- El home se mantiene minimalista: el proceso de admisión (4 pasos) y los
+  testimonios se quitaron del home y viven en sus propias páginas/secciones
+  (admision.html y secciones futuras del megamenú). Todos los enlaces que
+  apuntaban a `#admision` ahora apuntan a `admision.html`.
 - Paleta del sitio "Marino" (elegida por opencode, tema oceánico):
   - Marino `#0E4D64` (primario: botones, iconos acento, overlays de fotos),
     marino vivo `#16708F` (hovers), marino oscuro `#0A3A4C` (hover botones).
