@@ -1,17 +1,17 @@
 :root {
-  --bordo: #802927;
-  --bordo-vivo: #94332F;
-  --bordo-oscuro: #67201E;
-  --arena: #927A56;
-  --arena-claro: #D6B47E;
-  --tinta: #2E2A26;
-  --tinta-suave: #6A6258;
-  --crema: #F8F3EA;
-  --crema-suave: #F0E7D6;
-  --borde: #E6DCCB;
+  --marino: #0E4D64;
+  --marino-vivo: #16708F;
+  --marino-oscuro: #0A3A4C;
+  --aguamarina: #2A9D8F;
+  --espuma: #A8DFE3;
+  --tinta: #16313F;
+  --tinta-suave: #4F6875;
+  --bruma: #F4FAFB;
+  --bruma-suave: #E4F0F2;
+  --borde: #C9DFE2;
   --blanco: #ffffff;
-  --sombra: rgba(46, 42, 38, 0.08);
-  --sombra-fuerte: rgba(46, 42, 38, 0.16);
+  --sombra: rgba(12, 45, 60, 0.08);
+  --sombra-fuerte: rgba(12, 45, 60, 0.16);
 }
 
 * {
@@ -55,7 +55,7 @@ a {
 
 /* ---------- Barra superior ---------- */
 .topbar {
-  background: var(--bordo);
+  background: var(--marino);
   color: var(--blanco);
   font-size: 13px;
 }
@@ -73,7 +73,7 @@ a {
 }
 
 .topbar-portal {
-  color: var(--arena-claro);
+  color: var(--espuma);
   font-weight: 700;
 }
 
@@ -150,8 +150,8 @@ a {
 }
 
 .menu-lista > li > a:hover {
-  background: #E9DFCC;
-  color: var(--bordo);
+  background: #E3EEF0;
+  color: var(--marino);
 }
 
 .flecha {
@@ -190,8 +190,8 @@ a {
 }
 
 .desplegable a:hover {
-  background: var(--crema);
-  color: var(--bordo);
+  background: var(--bruma);
+  color: var(--marino);
 }
 
 .desplegable small {
@@ -203,7 +203,7 @@ a {
 }
 
 .desplegable a:hover small {
-  color: var(--bordo);
+  color: var(--marino);
 }
 
 .menu-iconos {
@@ -230,8 +230,8 @@ a {
 }
 
 .icono-nav:hover {
-  background: #E9DFCC;
-  color: var(--bordo);
+  background: #E3EEF0;
+  color: var(--marino);
 }
 
 .idioma {
@@ -255,7 +255,7 @@ a {
   min-height: 640px;
   display: flex;
   align-items: center;
-  background: var(--crema);
+  background: var(--bruma);
   color: var(--blanco);
   text-align: center;
   overflow: hidden;
@@ -285,7 +285,7 @@ a {
 .hero-fondo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(94, 27, 25, 0.55) 0%, rgba(94, 27, 25, 0.35) 60%, rgba(94, 27, 25, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(10, 47, 62, 0.55) 0%, rgba(10, 47, 62, 0.35) 60%, rgba(10, 47, 62, 0.5) 100%);
 }
 
 .hero-contenido {
@@ -299,7 +299,7 @@ a {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: var(--arena-claro);
+  color: var(--espuma);
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -317,7 +317,7 @@ a {
 .hero-desc {
   max-width: 620px;
   margin: 0 auto 36px;
-  color: #EFE6D5;
+  color: #E0EDEF;
   font-weight: 400;
   font-size: 17px;
 }
@@ -330,8 +330,8 @@ a {
 }
 
 .btn-primario {
-  background: var(--arena-claro);
-  color: var(--bordo);
+  background: var(--espuma);
+  color: var(--marino);
   font-weight: 700;
   padding: 14px 32px;
   border-radius: 8px;
@@ -345,7 +345,7 @@ a {
 }
 
 .btn-primario:hover {
-  background: #C49F67;
+  background: #8FD7DC;
 }
 
 .btn-secundario {
@@ -384,7 +384,7 @@ a {
 .cinta-item h3 {
   font-size: 58px;
   font-weight: 800;
-  color: var(--bordo);
+  color: var(--marino);
 }
 
 .cinta-item p {
@@ -400,25 +400,25 @@ section {
 }
 
 .seccion-gris {
-  background: #E9DFCC;
+  background: #E3EEF0;
 }
 
 #colegio {
-  background: #F8F3EA;
-  border-top: 4px solid var(--arena-claro);
+  background: #F4FAFB;
+  border-top: 4px solid var(--espuma);
 }
 
 #admision {
-  background: #F8F3EA;
-  border-top: 4px solid var(--arena-claro);
+  background: #F4FAFB;
+  border-top: 4px solid var(--espuma);
 }
 
 #directora {
-  background: #F8F3EA;
+  background: #F4FAFB;
 }
 
 #noticias {
-  border-top: 4px solid #E9DFCC;
+  border-top: 4px solid #E3EEF0;
 }
 
 .titulo-seccion {
@@ -435,7 +435,7 @@ section {
   display: block;
   width: 64px;
   height: 4px;
-  background: var(--bordo-vivo);
+  background: var(--marino-vivo);
   margin: 18px auto;
   border-radius: 2px;
 }
@@ -462,7 +462,7 @@ section {
 
 .bienvenida-texto p {
   margin-bottom: 16px;
-  color: #6A6258;
+  color: #4F6875;
 }
 
 .bienvenida-imagen {
@@ -488,7 +488,7 @@ section {
   scroll-snap-type: x mandatory;
   padding: 4px 4px 18px;
   scrollbar-width: thin;
-  scrollbar-color: var(--bordo) var(--crema);
+  scrollbar-color: var(--aguamarina) var(--bruma);
 }
 
 .carrusel::-webkit-scrollbar {
@@ -496,12 +496,12 @@ section {
 }
 
 .carrusel::-webkit-scrollbar-track {
-  background: var(--crema);
+  background: var(--bruma);
   border-radius: 4px;
 }
 
 .carrusel::-webkit-scrollbar-thumb {
-  background: var(--bordo);
+  background: var(--aguamarina);
   border-radius: 4px;
 }
 
@@ -525,12 +525,12 @@ section {
 
 .valores::before {
   left: 0;
-  background: linear-gradient(90deg, #F8F3EA, rgba(248, 243, 234, 0));
+  background: linear-gradient(90deg, #F4FAFB, rgba(244, 250, 251, 0));
 }
 
 .valores::after {
   right: 0;
-  background: linear-gradient(270deg, #F8F3EA, rgba(248, 243, 234, 0));
+  background: linear-gradient(270deg, #F4FAFB, rgba(244, 250, 251, 0));
 }
 
 .valores-grupo {
@@ -577,20 +577,20 @@ section {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: rgba(128, 41, 39, 0.1);
+  background: rgba(14, 77, 100, 0.08);
   flex: 0 0 62px;
 }
 
 .valor-icono i {
   font-size: 24px;
-  color: var(--bordo);
+  color: var(--marino);
 }
 
 .valor-texto strong {
   display: block;
   font-family: "Space Grotesk", sans-serif;
   font-size: 16px;
-  color: var(--bordo);
+  color: var(--marino);
   margin-bottom: 2px;
 }
 
@@ -660,7 +660,7 @@ section {
 
 .etapa-edad {
   font-size: 12px;
-  color: var(--bordo);
+  color: var(--marino);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -674,13 +674,13 @@ section {
 }
 
 .enlace {
-  color: var(--bordo);
+  color: var(--marino);
   font-weight: 700;
   font-size: 14px;
 }
 
 .enlace:hover {
-  color: var(--bordo-oscuro);
+  color: var(--marino-oscuro);
 }
 
 /* ---------- Directora ---------- */
@@ -727,7 +727,7 @@ section {
 
 .directora-firma {
   font-weight: 800;
-  color: var(--bordo);
+  color: var(--marino);
   font-size: 17px;
 }
 
@@ -758,7 +758,7 @@ section {
   display: inline-block;
   font-size: 28px;
   font-weight: 800;
-  color: var(--bordo-oscuro);
+  color: var(--marino-oscuro);
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -810,7 +810,7 @@ section {
 
 .fecha {
   font-size: 12px;
-  color: var(--bordo);
+  color: var(--marino);
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -861,14 +861,14 @@ section {
   top: -10px;
   font-family: "Space Grotesk", sans-serif;
   font-size: 44px;
-  color: var(--arena-claro);
+  color: var(--espuma);
   line-height: 1;
 }
 
 .testimonio-nombre {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  color: var(--bordo);
+  color: var(--marino);
   font-size: 15px;
 }
 
@@ -882,7 +882,7 @@ section {
 
 /* ---------- Llamado a la acción ---------- */
 .cta {
-  background: var(--bordo);
+  background: var(--marino);
 }
 
 .cta-inner {
@@ -900,13 +900,13 @@ section {
 }
 
 .cta-texto p {
-  color: var(--arena-claro);
+  color: var(--espuma);
   font-weight: 500;
 }
 
 .btn-cta {
-  background: var(--arena-claro);
-  color: var(--bordo);
+  background: var(--espuma);
+  color: var(--marino);
   font-weight: 700;
   padding: 14px 32px;
   border-radius: 8px;
@@ -915,13 +915,13 @@ section {
 }
 
 .btn-cta:hover {
-  background: #C49F67;
+  background: #8FD7DC;
 }
 
 /* ---------- Pie de página ---------- */
 .footer {
   background: var(--tinta);
-  color: #C2B79F;
+  color: #ACC8D0;
 }
 
 .footer-grid {
@@ -941,7 +941,7 @@ section {
 
 .footer-lema {
   font-size: 11px;
-  color: var(--arena-claro);
+  color: var(--espuma);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 4px;
@@ -957,13 +957,13 @@ section {
 
 .footer-col a {
   display: block;
-  color: #C2B79F;
+  color: #ACC8D0;
   font-size: 14px;
   margin-bottom: 9px;
 }
 
 .footer-col a:hover {
-  color: var(--bordo-vivo);
+  color: var(--marino-vivo);
 }
 
 .footer-col p {
@@ -976,7 +976,7 @@ section {
   text-align: center;
   padding: 20px 24px;
   font-size: 13px;
-  color: #A29682;
+  color: #8FAEB8;
 }
 
 /* ---------- Responsivo ---------- */
@@ -1137,7 +1137,7 @@ section {
   bottom: 4px;
   height: 2px;
   width: calc(100% - 24px);
-  background: var(--bordo-vivo);
+  background: var(--marino-vivo);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s ease;
@@ -1221,7 +1221,7 @@ html.js .grid-animada.visible > * {
   position: absolute;
   inset: -4px;
   border-radius: inherit;
-  box-shadow: 0 0 0 4px rgba(214, 180, 126, 0.45);
+  box-shadow: 0 0 0 4px rgba(168, 223, 227, 0.45);
   opacity: 0;
   animation: respiro-atencion 2.4s ease-in-out infinite;
 }
@@ -1238,7 +1238,7 @@ html.js .grid-animada.visible > * {
 
 /* Accesibilidad por teclado: foco visible */
 :focus-visible {
-  outline: 2px solid var(--bordo-vivo);
+  outline: 2px solid var(--marino-vivo);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -1312,7 +1312,7 @@ html.js .grid-animada.visible > * {
 .pagina-hero-fondo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(94, 27, 25, 0.66), rgba(94, 27, 25, 0.35));
+  background: linear-gradient(rgba(10, 47, 62, 0.66), rgba(10, 47, 62, 0.35));
 }
 
 .pagina-hero.foto .container {
@@ -1329,13 +1329,13 @@ html.js .grid-animada.visible > * {
 }
 
 .pagina-hero .miga {
-  color: var(--arena-claro);
+  color: var(--espuma);
   font-size: 14px;
   margin-bottom: 18px;
 }
 
 .pagina-hero .miga a {
-  color: var(--arena-claro);
+  color: var(--espuma);
 }
 
 .pagina-hero .miga a:hover {
@@ -1349,19 +1349,19 @@ html.js .grid-animada.visible > * {
 }
 
 .pagina-hero .etapa-edad {
-  color: var(--arena-claro);
+  color: var(--espuma);
   font-size: 18px;
   font-weight: 600;
 }
 
 .nav-volver {
-  color: var(--bordo);
+  color: var(--marino);
   font-weight: 600;
   font-size: 14px;
 }
 
 .nav-volver:hover {
-  color: var(--bordo-vivo);
+  color: var(--marino-vivo);
 }
 
 .pagina-contenido {
@@ -1437,7 +1437,7 @@ html.js .grid-animada.visible > * {
 
 .pagina-tarjeta i {
   font-size: 24px;
-  color: var(--bordo);
+  color: var(--marino);
   margin-bottom: 12px;
 }
 
@@ -1459,7 +1459,7 @@ html.js .grid-animada.visible > * {
 }
 
 .pagina-hora {
-  background: var(--crema);
+  background: var(--bruma);
   border-radius: 8px;
   padding: 16px 20px;
   display: flex;
@@ -1468,7 +1468,7 @@ html.js .grid-animada.visible > * {
 }
 
 .pagina-hora strong {
-  color: var(--bordo);
+  color: var(--marino);
   min-width: 100px;
   font-family: "Space Grotesk", sans-serif;
   font-size: 15px;
@@ -1505,7 +1505,7 @@ html.js .grid-animada.visible > * {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(74, 23, 21, 0.92);
+  background: rgba(8, 40, 53, 0.92);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1534,8 +1534,8 @@ html.js .grid-animada.visible > * {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 4px solid rgba(214, 180, 126, 0.3);
-  border-top-color: var(--arena-claro);
+  border: 4px solid rgba(168, 223, 227, 0.3);
+  border-top-color: var(--espuma);
   animation: girarCargando 0.9s linear infinite;
 }
 
@@ -1551,7 +1551,7 @@ html.js .grid-animada.visible > * {
   font-size: 14px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--arena-claro);
+  color: var(--espuma);
   font-weight: 600;
 }
 
