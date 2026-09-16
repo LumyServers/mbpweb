@@ -3,120 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I.E.P Mi Buen Pastor</title>
+  <title>I.E.P Mi Buen Pastor | Educando con amor y fe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header">
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-msg">Matrícula 2026 abierta · ¡Inscríbete ya!</span>
+      <a href="#" class="topbar-portal">Portal del estudiante</a>
+    </div>
+  </div>
+
+  <!-- Encabezado / menú -->
+  <header class="header" id="header">
     <div class="container nav">
       <div class="marca">
-        <span class="marca-nombre">I.E.P <strong>Mi Buen Pastor</strong></span>
+        <a href="#inicio"><span class="marca-nombre">I.E.P <strong>Mi Buen Pastor</strong></span></a>
         <span class="marca-lema">Educando con amor y fe</span>
       </div>
-      <nav class="menu">
+      <nav class="menu" id="menu">
         <a href="#inicio">Inicio</a>
-        <a href="#publicaciones">Publicaciones</a>
-        <a href="#galeria">Galería</a>
+        <a href="#colegio">El colegio</a>
+        <a href="#etapas">Etapas</a>
+        <a href="#admision">Admisión</a>
+        <a href="#noticias">Noticias</a>
         <a href="#contacto">Contacto</a>
+        <a href="#admision" class="btn-menu matricula">Matrícula</a>
       </nav>
+      <button class="menu-boton" id="menuBoton" aria-label="Abrir menú">☰</button>
     </div>
   </header>
 
+  <!-- Portada -->
   <section id="inicio" class="hero">
     <div class="hero-fondo"></div>
     <div class="container hero-contenido">
-      <h1>I.E.P Mi Buen Pastor</h1>
-      <p class="hero-sub">Formando vidas con valores, conocimiento y fe</p>
+      <p class="hero-frase">“El Señor es mi pastor”</p>
+      <h1>Formando líderes con valores, conocimiento y fe</h1>
       <p class="hero-desc">
-        Bienvenidos a nuestra institución. Aquí cada estudiante encuentra un lugar
-        para crecer, aprender y construir su futuro.
+        I.E.P Mi Buen Pastor es una institución educativa comprometida con una
+        formación integral: académica, espiritual y humana.
       </p>
-      <a href="#publicaciones" class="btn-dorado">Conoce más</a>
+      <div class="hero-botones">
+        <a href="#colegio" class="btn-dorado">Conoce nuestro colegio</a>
+        <a href="#admision" class="btn-oscuro">Agenda una visita</a>
+      </div>
     </div>
   </section>
 
+  <!-- Cifras -->
   <section class="cinta">
     <div class="container cinta-grid">
-      <div class="cinta-item">
-        <h3>+500</h3>
-        <p>Estudiantes</p>
+      <div class="cinta-item"><h3>+500</h3><p>Estudiantes</p></div>
+      <div class="cinta-item"><h3>25</h3><p>Años de trayectoria</p></div>
+      <div class="cinta-item"><h3>+40</h3><p>Docentes calificados</p></div>
+      <div class="cinta-item"><h3>100%</h3><p>Educación en valores</p></div>
+    </div>
+  </section>
+
+  <!-- El colegio -->
+  <section id="colegio">
+    <div class="container">
+      <h2 class="titulo-seccion">¡Bienvenidos a Mi Buen Pastor!</h2>
+      <p class="subtitulo">Un lugar donde los sueños de tus hijos comienzan a hacerse realidad.</p>
+
+      <div class="bienvenida">
+        <div class="bienvenida-texto">
+          <p>
+            Nuestra institución acompaña a cada estudiante en su desarrollo con una
+            pedagogía que une la excelencia académica y los valores cristianos.
+            Contamos con aulas modernas, áreas de recreación y un equipo docente
+            comprometido con el éxito de cada alumno.
+          </p>
+          <p>
+            Creemos en una educación que forma personas íntegras: estudiantes que
+            aprendan a pensar, a servir y a crecer con fe.
+          </p>
+        </div>
+        <div class="bienvenida-imagen">
+          <div class="lugar-imagen">Nuestro colegio</div>
+        </div>
       </div>
-      <div class="cinta-item">
-        <h3>25</h3>
-        <p>Años de trayectoria</p>
-      </div>
-      <div class="cinta-item">
-        <h3>+40</h3>
-        <p>Docentes calificados</p>
+
+      <div class="pilares">
+        <div class="pilar">
+          <span class="pilar-icono">🎓</span>
+          <h3>Excelencia académica</h3>
+          <p>Programas sólidos que desarrollan el pensamiento y el conocimiento.</p>
+        </div>
+        <div class="pilar">
+          <span class="pilar-icono">❤️</span>
+          <h3>Formación en valores</h3>
+          <p>Amor, respeto y responsabilidad como base de la convivencia.</p>
+        </div>
+        <div class="pilar">
+          <span class="pilar-icono">🎨</span>
+          <h3>Talento y creatividad</h3>
+          <p>Arte, deporte y cultura para descubrir el potencial de cada alumno.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <main>
-    <section id="publicaciones">
-      <div class="container">
-        <h2 class="titulo-seccion">Últimas publicaciones</h2>
-        <article class="tarjeta">
-          <span class="badge-fecha">15 de septiembre de 2026</span>
-          <h3>Inicio del año escolar 2026</h3>
-          <p>Damos la bienvenida a todos nuestros estudiantes para un nuevo año de aprendizaje, compañerismo y crecimiento personal.</p>
-        </article>
-        <article class="tarjeta">
-          <span class="badge-fecha">14 de septiembre de 2026</span>
-          <h3>Celebración del Día del Padre</h3>
-          <p>Con mucha alegría celebramos a todos los papás con actividades y presentaciones preparadas por nuestros estudiantes.</p>
-        </article>
-        <article class="tarjeta">
-          <span class="badge-fecha">10 de septiembre de 2026</span>
-          <h3>Campeonato deportivo interno</h3>
-          <p>Arrancó nuestra competencia deportiva entre grados. ¡Vengan a apoyar a sus equipos favoritos!</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="galeria" class="seccion-gris">
-      <div class="container">
-        <h2 class="titulo-seccion">Galería de fotos</h2>
-        <p class="subtitulo">Momentos de nuestra vida escolar.</p>
-        <div class="galeria">
-          <div class="foto foto-grande">Nuestras aulas</div>
-          <div class="foto">Eventos</div>
-          <div class="foto">Deportes</div>
-          <div class="foto">Actividades</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <div class="container">
-        <h2 class="titulo-seccion">Contacto</h2>
-        <div class="contacto-grid">
-          <div class="contacto-item">
-            <span class="icono">📍</span>
-            <p>Dirección del colegio</p>
-          </div>
-          <div class="contacto-item">
-            <span class="icono">📞</span>
-            <p>(000) 000-0000</p>
-          </div>
-          <div class="contacto-item">
-            <span class="icono">✉️</span>
-            <p>contacto@mibuenpastor.edu</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
+  <!-- Etapas educativas -->
+  <section id="etapas" class="seccion-gris">
     <div class="container">
+      <h2 class="titulo-seccion">Etapas educativas</h2>
+      <p class="subtitulo">Acompañamos a cada estudiante desde sus primeros pasos hasta la secundaria.</p>
+
+      <div class="etapas-grid">
+        <div class="etapa">
+          <div class="etapa-banner banner-inicial"><span>Inicial</span></div>
+          <div class="etapa-info">
+            <h3>Inicial</h3>
+            <p class="etapa-edad">De 3 a 5 años</p>
+            <p>Primeros pasos en el aprendizaje mediante el juego, la música y los valores.</p>
+            <a href="#" class="enlace">Saber más →</a>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-banner banner-primaria"><span>Primaria</span></div>
+          <div class="etapa-info">
+            <h3>Primaria</h3>
+            <p class="etapa-edad">De 6 a 11 años</p>
+            <p>Fortalecemos la lectura, la escritura, las matemáticas y la fe cristiana.</p>
+            <a href="#" class="enlace">Saber más →</a>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-banner banner-secundaria"><span>Secundaria</span></div>
+          <div class="etapa-info">
+            <h3>Secundaria</h3>
+            <p class="etapa-edad">De 12 a 17 años</p>
+            <p>Preparamos a nuestros jóvenes para la vida universitaria y profesional.</p>
+            <a href="#" class="enlace">Saber más →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de admisión -->
+  <section id="admision">
+    <div class="container">
+      <h2 class="titulo-seccion">Proceso de admisión</h2>
+      <p class="subtitulo">Mira lo fácil que es unirte a nuestra comunidad.</p>
+
+      <div class="pasos">
+        <div class="paso">
+          <span class="paso-numero">01</span>
+          <h3>Contacto inicial</h3>
+          <p>Completa el formulario de consulta o comunícate con nosotros.</p>
+        </div>
+        <div class="paso">
+          <span class="paso-numero">02</span>
+          <h3>Visita al colegio</h3>
+          <p>Agenda un recorrido y conoce nuestras instalaciones.</p>
+        </div>
+        <div class="paso">
+          <span class="paso-numero">03</span>
+          <h3>Inscripción</h3>
+          <p>Registra al postulante y envía la documentación requerida.</p>
+        </div>
+        <div class="paso">
+          <span class="paso-numero">04</span>
+          <h3>Matrícula</h3>
+          <p>Completa la matrícula y da la bienvenida a tu hijo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Noticias -->
+  <section id="noticias" class="seccion-gris">
+    <div class="container">
+      <h2 class="titulo-seccion">Noticias y eventos</h2>
+      <p class="subtitulo">Lo que está pasando en nuestro colegio.</p>
+
+      <div class="noticias-grid">
+        <article class="noticia">
+          <div class="noticia-banner banner-not1"><span>Evento</span></div>
+          <div class="noticia-cuerpo">
+            <time class="fecha">15 de septiembre de 2026</time>
+            <h3>Inicio del año escolar 2026</h3>
+            <p>Damos la bienvenida a todos los estudiantes para un nuevo año de aprendizajes.</p>
+            <a href="#" class="enlace">Leer más →</a>
+          </div>
+        </article>
+        <article class="noticia">
+          <div class="noticia-banner banner-not2"><span>Celebración</span></div>
+          <div class="noticia-cuerpo">
+            <time class="fecha">14 de septiembre de 2026</time>
+            <h3>Día del padre</h3>
+            <p>Celebramos a los papás con presentaciones de nuestros estudiantes.</p>
+            <a href="#" class="enlace">Leer más →</a>
+          </div>
+        </article>
+        <article class="noticia">
+          <div class="noticia-banner banner-not3"><span>Deportes</span></div>
+          <div class="noticia-cuerpo">
+            <time class="fecha">10 de septiembre de 2026</time>
+            <h3>Campeonato deportivo interno</h3>
+            <p>Arrancó la competencia deportiva entre grados. ¡Vengan a apoyar!</p>
+            <a href="#" class="enlace">Leer más →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamado a la acción: matrícula -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <div class="cta-texto">
+        <h2>¡Tu hijo tiene un lugar aquí!</h2>
+        <p>Inscripciones abiertas para el año escolar 2026.</p>
+      </div>
+      <a href="#contacto" class="btn-dorado">Pide información</a>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="titulo-seccion">Contacto</h2>
+      <p class="subtitulo">Estamos para atenderte.</p>
+
+      <div class="contacto-grid">
+        <div class="contacto-item">
+          <span class="icono">📍</span>
+          <h3>Dirección</h3>
+          <p>Dirección del colegio</p>
+        </div>
+        <div class="contacto-item">
+          <span class="icono">📞</span>
+          <h3>Teléfono</h3>
+          <p>(000) 000-0000</p>
+        </div>
+        <div class="contacto-item">
+          <span class="icono">✉️</span>
+          <h3>Correo</h3>
+          <p>contacto@mibuenpastor.edu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-marca">
+        <p class="footer-nombre">I.E.P <strong>Mi Buen Pastor</strong></p>
+        <p class="footer-lema">Educando con amor y fe</p>
+      </div>
+      <div class="footer-col">
+        <h4>El colegio</h4>
+        <a href="#colegio">Nuestro colegio</a>
+        <a href="#etapas">Etapas educativas</a>
+        <a href="#admision">Admisión</a>
+        <a href="#noticias">Noticias</a>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces útiles</h4>
+        <a href="#admision">Matrícula</a>
+        <a href="#contacto">Contáctanos</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Portal del estudiante</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>Dirección del colegio</p>
+        <p>(000) 000-0000</p>
+        <p>contacto@mibuenpastor.edu</p>
+      </div>
+    </div>
+    <div class="footer-legal">
       <p>© 2026 I.E.P Mi Buen Pastor. Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <script>
+    const boton = document.getElementById("menuBoton");
+    const menu = document.getElementById("menu");
+    boton.addEventListener("click", () => {
+      menu.classList.toggle("abierto");
+    });
+  </script>
 </body>
 </html>
